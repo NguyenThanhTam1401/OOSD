@@ -71,7 +71,7 @@ namespace Game_Dua_Xe
             MyCar.Image = Game_Dua_Xe.Properties.Resources.police;
             MyCar.Location = new Point(130, 310);
             MyCar.Size = new Size(40, 80);
-            MyCar.Speed = 4;
+            MyCar.Speed = 3;
             this.Controls.Add(MyCar);
             MyCar.BringToFront();
             //list Enemy
