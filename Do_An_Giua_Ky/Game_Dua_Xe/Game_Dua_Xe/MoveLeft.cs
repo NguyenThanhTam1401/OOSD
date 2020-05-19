@@ -18,7 +18,8 @@ namespace Game_Dua_Xe
         {
             if (this._Car.Left > 5)
                 this._Car.Left -= this._Car.Speed;
-
+            if (this._Car.isOver)
+                return;
             SetImage();
             GetStateString();
 
@@ -31,11 +32,7 @@ namespace Game_Dua_Xe
             else if (this._Car._Right)
                 this._Car.TransitionTo(new MoveRight());
 
-
-            else if (this._Car.isOver)
-                this._Car.TransitionTo(new CloseState());
-
-            else this._Car.TransitionTo(new NormalState());
+            //else this._Car.TransitionTo(new NormalState());
 
         }
 

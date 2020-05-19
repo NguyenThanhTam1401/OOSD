@@ -49,6 +49,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbState = new System.Windows.Forms.Label();
             this.ptbxCount = new System.Windows.Forms.PictureBox();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnRestart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.line4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.line3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.line2)).BeginInit();
@@ -84,9 +86,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(389, 163);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 25);
+            this.label1.Size = new System.Drawing.Size(89, 25);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Level: ";
+            this.label1.Text = "Cấp độ:";
             // 
             // label2
             // 
@@ -94,9 +96,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(426, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 25);
+            this.label2.Size = new System.Drawing.Size(161, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = "TÊN GAME";
+            this.label2.Text = "GAME ĐUA XE";
             // 
             // label3
             // 
@@ -104,9 +106,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(389, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 25);
+            this.label3.Size = new System.Drawing.Size(68, 25);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Score:";
+            this.label3.Text = "Điểm:";
             // 
             // label4
             // 
@@ -142,6 +144,7 @@
             // 
             this.lbScore.AutoSize = true;
             this.lbScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbScore.ForeColor = System.Drawing.Color.Red;
             this.lbScore.Location = new System.Drawing.Point(495, 74);
             this.lbScore.Name = "lbScore";
             this.lbScore.Size = new System.Drawing.Size(24, 25);
@@ -214,14 +217,15 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(400, 243);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(162, 25);
+            this.label7.Size = new System.Drawing.Size(144, 25);
             this.label7.TabIndex = 3;
-            this.label7.Text = "My Car\'s State:";
+            this.label7.Text = "State của Xe:";
             // 
             // lbState
             // 
             this.lbState.AutoSize = true;
             this.lbState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbState.ForeColor = System.Drawing.Color.Red;
             this.lbState.Location = new System.Drawing.Point(400, 290);
             this.lbState.Name = "lbState";
             this.lbState.Size = new System.Drawing.Size(63, 25);
@@ -238,12 +242,36 @@
             this.ptbxCount.TabIndex = 8;
             this.ptbxCount.TabStop = false;
             // 
+            // btnStart
+            // 
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(431, 358);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(103, 40);
+            this.btnStart.TabIndex = 9;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // btnRestart
+            // 
+            this.btnRestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestart.Location = new System.Drawing.Point(434, 413);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(100, 40);
+            this.btnRestart.TabIndex = 10;
+            this.btnRestart.Text = "Restart";
+            this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(601, 514);
+            this.Controls.Add(this.btnRestart);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.ptbxCount);
             this.Controls.Add(this.RightLine);
             this.Controls.Add(this.leftLine);
@@ -263,6 +291,7 @@
             this.Controls.Add(this.line3);
             this.Controls.Add(this.line4);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dễ";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyUp);
@@ -298,6 +327,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbState;
         private System.Windows.Forms.PictureBox ptbxCount;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnRestart;
     }
 }
 

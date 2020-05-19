@@ -16,6 +16,8 @@ namespace Game_Dua_Xe
 
         public override void Move()
         {
+            SetImage();
+            GetStateString();
             if (this._Car._Up)
                 this._Car.TransitionTo(new MoveUp());
 
@@ -27,9 +29,6 @@ namespace Game_Dua_Xe
 
             else if (this._Car._Left)
                 this._Car.TransitionTo(new MoveLeft());
-
-            else if (this._Car.isOver)
-                this._Car.TransitionTo(new CloseState());
         }
 
         public override void SetImage()

@@ -18,15 +18,13 @@ namespace Game_Dua_Xe
         {
             if (this._Car.Bottom < 420)
                 this._Car.Top += this._Car.Speed;
-
+            if (this._Car.isOver)
+                return;
             SetImage();
             GetStateString();
 
             if (this._Car._Up)
                 this._Car.TransitionTo(new MoveUp());
-
-            //else if (this._Car._Down)
-            //    this._Car.TransitionTo(new MoveDown());
 
             else if (this._Car._Right)
                 this._Car.TransitionTo(new MoveRight());
@@ -34,10 +32,6 @@ namespace Game_Dua_Xe
             else if (this._Car._Left)
                 this._Car.TransitionTo(new MoveLeft());
 
-            else if (this._Car.isOver)
-                this._Car.TransitionTo(new CloseState());
-
-            else this._Car.TransitionTo(new NormalState());
         }
 
         public override void SetImage()

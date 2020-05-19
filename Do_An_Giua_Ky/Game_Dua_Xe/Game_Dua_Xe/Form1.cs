@@ -26,16 +26,9 @@ namespace Game_Dua_Xe
         {
             InitializeComponent();
 
-            lbgameover.Visible = false;
-            coinList = new List<PhuongTien>();
-            enemyList = new List<PhuongTien>();
-            MyCar = new Car();
-            tmBatDau = new Timer();
-            tmBatDau.Tick += TmBatDau_Tick;
-            this.tmBatDau.Enabled = false;
-            this.tmBatDau.Interval = 100;
+
             Init();
-            tmBatDau.Start();
+            //tmBatDau.Start();
         }
 
         private void TmBatDau_Tick(object sender, EventArgs e)
@@ -62,7 +55,18 @@ namespace Game_Dua_Xe
 
         private void Init()
         {
+            btnRestart.Enabled = false;
+            this.isGameOver = false;
+            this.score = 0;
             igiay = 30;
+            lbgameover.Visible = false;
+            coinList = new List<PhuongTien>();
+            enemyList = new List<PhuongTien>();
+            MyCar = new Car();
+            tmBatDau = new Timer();
+            tmBatDau.Tick += TmBatDau_Tick;
+            this.tmBatDau.Enabled = false;
+            this.tmBatDau.Interval = 100;
             //My car
             MyCar.Image = Game_Dua_Xe.Properties.Resources.police;
             MyCar.Location = new Point(130, 310);
@@ -302,9 +306,8 @@ namespace Game_Dua_Xe
                 if (MyCar.IsIntersect(item))
                 {
                     item.SendToBack();
-                    //MyCar.Image = Game_Dua_Xe.Properties.Resources.boom;
                     MyCar.isOver = true;
-                    MyCar.TransitionTo(new CloseState());
+                    MyCar.Image = Game_Dua_Xe.Properties.Resources.boom;
                     MyCar.Moving();
                     lbState.Text = MyCar.StateString;
                     item.Image = Game_Dua_Xe.Properties.Resources.boom;
@@ -315,7 +318,8 @@ namespace Game_Dua_Xe
                     lbgameover.Text = "Game Over\nYour score: " + score;
                     lbgameover.Visible = true;
                     isGameOver = true;
-
+                   
+                    btnRestart.Enabled = true;
                 }
             }
         }
@@ -346,5 +350,18 @@ namespace Game_Dua_Xe
             return false;  
         }
 
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            
+            //Init();
+            tmBatDau.Start();
+            btnStart.Enabled = false;
+            btnRestart.Enabled = false;
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }

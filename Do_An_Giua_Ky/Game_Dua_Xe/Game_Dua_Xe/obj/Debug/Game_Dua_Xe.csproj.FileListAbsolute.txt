@@ -8,3 +8,13 @@ C:\Users\Thanh Tam\Desktop\image do an\Game_Dua_Xe\Game_Dua_Xe\obj\Debug\Game_Du
 C:\Users\Thanh Tam\Desktop\image do an\Game_Dua_Xe\Game_Dua_Xe\obj\Debug\Game_Dua_Xe.exe
 C:\Users\Thanh Tam\Desktop\image do an\Game_Dua_Xe\Game_Dua_Xe\obj\Debug\Game_Dua_Xe.pdb
 C:\Users\Thanh Tam\Desktop\image do an\Game_Dua_Xe\Game_Dua_Xe\obj\Debug\Game_Dua_Xe.csprojAssemblyReference.cache
+D:\Github\OOSD\Do_An_Giua_Ky\Game_Dua_Xe\Game_Dua_Xe\bin\Debug\Game_Dua_Xe.exe.config
+D:\Github\OOSD\Do_An_Giua_Ky\Game_Dua_Xe\Game_Dua_Xe\bin\Debug\Game_Dua_Xe.exe
+D:\Github\OOSD\Do_An_Giua_Ky\Game_Dua_Xe\Game_Dua_Xe\bin\Debug\Game_Dua_Xe.pdb
+D:\Github\OOSD\Do_An_Giua_Ky\Game_Dua_Xe\Game_Dua_Xe\obj\Debug\Game_Dua_Xe.csprojAssemblyReference.cache
+D:\Github\OOSD\Do_An_Giua_Ky\Game_Dua_Xe\Game_Dua_Xe\obj\Debug\Game_Dua_Xe.frmMain.resources
+D:\Github\OOSD\Do_An_Giua_Ky\Game_Dua_Xe\Game_Dua_Xe\obj\Debug\Game_Dua_Xe.Properties.Resources.resources
+D:\Github\OOSD\Do_An_Giua_Ky\Game_Dua_Xe\Game_Dua_Xe\obj\Debug\Game_Dua_Xe.csproj.GenerateResource.cache
+D:\Github\OOSD\Do_An_Giua_Ky\Game_Dua_Xe\Game_Dua_Xe\obj\Debug\Game_Dua_Xe.csproj.CoreCompileInputs.cache
+D:\Github\OOSD\Do_An_Giua_Ky\Game_Dua_Xe\Game_Dua_Xe\obj\Debug\Game_Dua_Xe.exe
+D:\Github\OOSD\Do_An_Giua_Ky\Game_Dua_Xe\Game_Dua_Xe\obj\Debug\Game_Dua_Xe.pdb
