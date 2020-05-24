@@ -9,10 +9,10 @@ namespace Game_Dua_Xe
 {
     public abstract class MoveState
     {
-        protected Car _Car;
-        public void SetCar(Car car)
+        protected CarContext _CarContext;
+        public void SetCar(CarContext car)
         {
-            this._Car = car;
+            this._CarContext = car;
         }
 
         public abstract void Move();

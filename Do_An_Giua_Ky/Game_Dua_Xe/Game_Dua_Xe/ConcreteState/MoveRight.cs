@@ -11,35 +11,35 @@ namespace Game_Dua_Xe
     {
         public override void GetStateString()
         {
-            this._Car.StateString = "Move Right";
+            this._CarContext.StateString = "Move Right";
         }
 
         public override void Move()
         {
-            if (this._Car.Right < 280)
-                this._Car.Left += this._Car.Speed;
-            if (this._Car.isOver)
+            if (this._CarContext.Right < 280)
+                this._CarContext.Left += this._CarContext.Speed;
+            if (this._CarContext.isOver)
                 return;
             SetImage();
             GetStateString();
 
-            if (this._Car._Up)
-                this._Car.TransitionTo(new MoveUp());
+            if (this._CarContext._Up)
+                this._CarContext.TransitionTo(new MoveUp());
 
-            else if (this._Car._Down)
-                this._Car.TransitionTo(new MoveDown());
+            else if (this._CarContext._Down)
+                this._CarContext.TransitionTo(new MoveDown());
 
 
 
-            else if (this._Car._Left)
-                this._Car.TransitionTo(new MoveLeft());
+            else if (this._CarContext._Left)
+                this._CarContext.TransitionTo(new MoveLeft());
 
-            //else this._Car.TransitionTo(new NormalState());
+            //else this._CarContext.TransitionTo(new NormalState());
         }
 
         public override void SetImage()
         {
-            this._Car.Image = Game_Dua_Xe.Properties.Resources.policeRight;
+            this._CarContext.Image = Game_Dua_Xe.Properties.Resources.policeRight;
         }
     }
 }

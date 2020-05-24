@@ -11,40 +11,40 @@ namespace Game_Dua_Xe
     {
         public override void GetStateString()
         {
-            this._Car.StateString = "Move Up";
+            this._CarContext.StateString = "Move Up";
         }
 
         public override void Move()
         {
-            if (this._Car.Top > 15)
-                this._Car.Top -= this._Car.Speed;
-            if (this._Car.isOver)
+            if (this._CarContext.Top > 15)
+                this._CarContext.Top -= this._CarContext.Speed;
+            if (this._CarContext.isOver)
                 return;
             SetImage();
             GetStateString();
-            //if (this._Car._Up)
-            //    this._Car.TransitionTo(new MoveUp());
+            //if (this._CarContext._Up)
+            //    this._CarContext.TransitionTo(new MoveUp());
 
-            if (this._Car._Down)
-                this._Car.TransitionTo(new MoveDown());
+            if (this._CarContext._Down)
+                this._CarContext.TransitionTo(new MoveDown());
 
-            else if (this._Car._Right)
-                this._Car.TransitionTo(new MoveRight());
+            else if (this._CarContext._Right)
+                this._CarContext.TransitionTo(new MoveRight());
 
-            else if (this._Car._Left)
-                this._Car.TransitionTo(new MoveLeft());
+            else if (this._CarContext._Left)
+                this._CarContext.TransitionTo(new MoveLeft());
 
-            //else this._Car.TransitionTo(new NormalState());
+            //else this._CarContext.TransitionTo(new NormalState());
         }
 
         public override void SetImage()
         {
-            if (this._Car._Left)
-                this._Car.Image = Game_Dua_Xe.Properties.Resources.policeLeft;
-            else if (this._Car._Right)
-                this._Car.Image = Game_Dua_Xe.Properties.Resources.policeRight;
+            if (this._CarContext._Left)
+                this._CarContext.Image = Game_Dua_Xe.Properties.Resources.policeLeft;
+            else if (this._CarContext._Right)
+                this._CarContext.Image = Game_Dua_Xe.Properties.Resources.policeRight;
             else
-                this._Car.Image = Game_Dua_Xe.Properties.Resources.police;
+                this._CarContext.Image = Game_Dua_Xe.Properties.Resources.police;
         }
     }
 }

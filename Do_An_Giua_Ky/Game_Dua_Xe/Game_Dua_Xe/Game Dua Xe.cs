@@ -16,7 +16,7 @@ namespace Game_Dua_Xe
         private bool isGameOver = false;
         private int level = 1;
         private int score = 0;
-        private Car MyCar;
+        private CarContext MyCar;
         List<PhuongTien> coinList;
         List<PhuongTien> enemyList;
         Timer tmBatDau;
@@ -62,7 +62,7 @@ namespace Game_Dua_Xe
             lbgameover.Visible = false;
             coinList = new List<PhuongTien>();
             enemyList = new List<PhuongTien>();
-            MyCar = new Car();
+            MyCar = new CarContext();
             tmBatDau = new Timer();
             tmBatDau.Tick += TmBatDau_Tick;
             this.tmBatDau.Enabled = false;

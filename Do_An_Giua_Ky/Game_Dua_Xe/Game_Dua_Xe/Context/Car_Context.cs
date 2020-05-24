@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Game_Dua_Xe
 {
-    public class Car:PhuongTien
+    public class CarContext:PhuongTien
     {
         public string StateString;
         // A reference to the current state of the Context.
         private MoveState _state = null;
 
-        public Car(MoveState state)
+        public CarContext(MoveState state)
         {
             this.TransitionTo(state);
         }
@@ -38,7 +38,7 @@ namespace Game_Dua_Xe
         public bool _Right { get; set; }
         public bool isOver { get; set; }
 
-        public Car()
+        public CarContext()
         {
             Speed = 0;
             _Up = false;
