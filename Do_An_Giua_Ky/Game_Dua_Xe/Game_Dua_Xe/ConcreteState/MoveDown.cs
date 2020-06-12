@@ -9,20 +9,21 @@ namespace Game_Dua_Xe
 {
     public class MoveDown: MoveState
     {
-        public override void GetStateString()
-        {
-            this._CarContext.StateString = "Move Down";
-        }
-
         public override void Move()
         {
-            if (this._CarContext.Bottom < 420)
-                this._CarContext.Top += this._CarContext.Speed;
             if (this._CarContext.isOver)
                 return;
-            SetImage();
-            GetStateString();
 
+            SetImage();
+
+            Move_Down();
+
+            StateTransit();
+
+        }
+
+        private void StateTransit()
+        {
             if (this._CarContext._Up)
                 this._CarContext.TransitionTo(new MoveUp());
 
@@ -31,7 +32,11 @@ namespace Game_Dua_Xe
 
             else if (this._CarContext._Left)
                 this._CarContext.TransitionTo(new MoveLeft());
-
+        }
+        private void Move_Down()
+        {
+            if (this._CarContext.Bottom < 420)
+                this._CarContext.Top += this._CarContext.Speed;
         }
 
         public override void SetImage()

@@ -9,20 +9,20 @@ namespace Game_Dua_Xe
 {
     public class MoveLeft:MoveState
     {
-        public override void GetStateString()
-        {
-            this._CarContext.StateString = "Move Left";
-        }
-
         public override void Move()
         {
-            if (this._CarContext.Left > 5)
-                this._CarContext.Left -= this._CarContext.Speed;
             if (this._CarContext.isOver)
                 return;
-            SetImage();
-            GetStateString();
 
+            SetImage();
+
+            Move_Left();
+
+            StateTransit();
+        }
+
+        private void StateTransit()
+        {
             if (this._CarContext._Up)
                 this._CarContext.TransitionTo(new MoveUp());
 
@@ -31,11 +31,12 @@ namespace Game_Dua_Xe
 
             else if (this._CarContext._Right)
                 this._CarContext.TransitionTo(new MoveRight());
-
-            //else this._CarContext.TransitionTo(new NormalState());
-
         }
-
+        private void Move_Left()
+        {
+            if (this._CarContext.Left > 5)
+                this._CarContext.Left -= this._CarContext.Speed;
+        }
         public override void SetImage()
         {
             this._CarContext.Image = Game_Dua_Xe.Properties.Resources.policeLeft;

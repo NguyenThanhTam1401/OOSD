@@ -24,7 +24,7 @@ namespace Game_Dua_Xe
             int y = random.Next(-300, -20);
             this.Location = new Point(x, y);
         }
-        public virtual void Move()
+        public new virtual void Move()
         {
             this.Top += this.Speed;
         }

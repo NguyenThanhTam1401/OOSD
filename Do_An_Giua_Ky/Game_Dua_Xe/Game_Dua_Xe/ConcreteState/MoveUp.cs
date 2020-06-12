@@ -9,22 +9,34 @@ namespace Game_Dua_Xe
 {
     public class MoveUp:MoveState
     {
-        public override void GetStateString()
-        {
-            this._CarContext.StateString = "Move Up";
-        }
-
         public override void Move()
         {
-            if (this._CarContext.Top > 15)
-                this._CarContext.Top -= this._CarContext.Speed;
+            //không làm gì nếu đã kết thúc!
             if (this._CarContext.isOver)
                 return;
             SetImage();
-            GetStateString();
-            //if (this._CarContext._Up)
-            //    this._CarContext.TransitionTo(new MoveUp());
+            Move_Up();
 
+            
+
+            StateTransit();
+        }
+
+        //Set image cho Xe
+        public override void SetImage()
+        {
+            this._CarContext.Image = Game_Dua_Xe.Properties.Resources.police;
+        }
+        //Dời vị trí của Xe lên.
+        private void Move_Up()
+        {
+            if (this._CarContext.Top > 15)
+                this._CarContext.Top -= this._CarContext.Speed;
+        }
+        
+        //Chuyển qua các sate khác
+        private void StateTransit()
+        {
             if (this._CarContext._Down)
                 this._CarContext.TransitionTo(new MoveDown());
 
@@ -33,18 +45,6 @@ namespace Game_Dua_Xe
 
             else if (this._CarContext._Left)
                 this._CarContext.TransitionTo(new MoveLeft());
-
-            //else this._CarContext.TransitionTo(new NormalState());
-        }
-
-        public override void SetImage()
-        {
-            if (this._CarContext._Left)
-                this._CarContext.Image = Game_Dua_Xe.Properties.Resources.policeLeft;
-            else if (this._CarContext._Right)
-                this._CarContext.Image = Game_Dua_Xe.Properties.Resources.policeRight;
-            else
-                this._CarContext.Image = Game_Dua_Xe.Properties.Resources.police;
         }
     }
 }

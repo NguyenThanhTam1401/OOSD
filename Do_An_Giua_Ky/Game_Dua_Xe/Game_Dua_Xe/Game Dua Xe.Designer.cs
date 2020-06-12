@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tmmain = new System.Windows.Forms.Timer(this.components);
-            this.tmcar = new System.Windows.Forms.Timer(this.components);
+            this.timerMain = new System.Windows.Forms.Timer(this.components);
+            this.timerCar = new System.Windows.Forms.Timer(this.components);
             this.lbgameover = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,15 +58,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbxCount)).BeginInit();
             this.SuspendLayout();
             // 
-            // tmmain
+            // timerMain
             // 
-            this.tmmain.Interval = 10;
-            this.tmmain.Tick += new System.EventHandler(this.tmmain_Tick);
+            this.timerMain.Interval = 10;
+            this.timerMain.Tick += new System.EventHandler(this.timerMain_Tick);
             // 
-            // tmcar
+            // timerCar
             // 
-            this.tmcar.Interval = 10;
-            this.tmcar.Tick += new System.EventHandler(this.tmcar_Tick);
+            this.timerCar.Interval = 10;
+            this.timerCar.Tick += new System.EventHandler(this.timerCar_Tick);
             // 
             // lbgameover
             // 
@@ -94,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(426, 31);
+            this.label2.Location = new System.Drawing.Point(400, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 25);
             this.label2.TabIndex = 4;
@@ -311,8 +311,8 @@
         private System.Windows.Forms.PictureBox line2;
         private System.Windows.Forms.PictureBox line3;
         private System.Windows.Forms.PictureBox line4;
-        private System.Windows.Forms.Timer tmmain;
-        private System.Windows.Forms.Timer tmcar;
+        private System.Windows.Forms.Timer timerMain;
+        private System.Windows.Forms.Timer timerCar;
         private System.Windows.Forms.Label lbgameover;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

@@ -12,25 +12,21 @@ namespace Game_Dua_Xe
 {
     public partial class frmMain : Form
     {
-
         private bool isGameOver = false;
-        private int level = 1;
         private int score = 0;
-        private CarContext MyCar;
-        List<PhuongTien> coinList;
-        List<PhuongTien> enemyList;
-        Timer tmBatDau;
+        private CarContext MyCar = null;
+        List<PhuongTien> coinList = null;
+        List<PhuongTien> enemyList = null;
+        Timer tmBatDau = null;
         private int igiay;
-        //private Car xechinh;
+
         public frmMain()
         {
             InitializeComponent();
-
-
             Init();
-            //tmBatDau.Start();
         }
 
+        // Timer chạy 3s đầu game
         private void TmBatDau_Tick(object sender, EventArgs e)
         {
             igiay--;
@@ -43,16 +39,31 @@ namespace Game_Dua_Xe
             if (igiay == 0)
             {
                 ptbxCount.Hide();
-                tmcar.Start();
-                tmmain.Start();
+                timerCar.Start();
+                timerMain.Start();
                 igiay = 30;
                 tmBatDau.Stop();
                 return;
             }
-
-            //ptbxCount.Image = Game_Dua_Xe.Properties.Resources._3;
         }
 
+        //Timer chạy khi game bắt đầu
+        private void timerMain_Tick(object sender, EventArgs e)
+        {
+            moveLine(5);
+            MovingPhuongtien();
+            TinhDiem();
+            gameOver();
+        }
+
+        //Timer di chuyển Xe
+        private void timerCar_Tick(object sender, EventArgs e)
+        {
+            MyCar.Moving();
+            lbState.Text = MyCar.getState();
+        }
+
+        // Khởi tạo đầu game và các đối tượng
         private void Init()
         {
             btnRestart.Enabled = false;
@@ -67,31 +78,33 @@ namespace Game_Dua_Xe
             tmBatDau.Tick += TmBatDau_Tick;
             this.tmBatDau.Enabled = false;
             this.tmBatDau.Interval = 100;
+
             //My car
             MyCar.Image = Game_Dua_Xe.Properties.Resources.police;
             MyCar.Location = new Point(130, 310);
             MyCar.Size = new Size(40, 80);
-            MyCar.Speed = 3;
+            MyCar.Speed = 2;
             this.Controls.Add(MyCar);
             MyCar.BringToFront();
+
             //list Enemy
             PhuongTien xehoi = new PhuongTien();
             xehoi.Image = Game_Dua_Xe.Properties.Resources.naucar;
-            xehoi.Location = new Point(-100, 50);
+            xehoi.Location = new Point(200, -300);
             xehoi.Size = new Size(35, 70);
-            xehoi.Speed = 3;
+            xehoi.Speed = 2;
 
             PhuongTien xetai = new PhuongTien();
             xetai.Image = Game_Dua_Xe.Properties.Resources.truck;
-            xetai.Location = new Point(-50, 100);
+            xetai.Location = new Point(125, -500);
             xetai.Size = new Size(40, 80);
-            xetai.Speed = 3;
+            xetai.Speed = 2;
 
             PhuongTien xetim = new PhuongTien();
             xetim.Image = Game_Dua_Xe.Properties.Resources.timcar;
-            xetim.Location = new Point(-10, 150);
+            xetim.Location = new Point(50, -80);
             xetim.Size = new Size(30, 60);
-            xetim.Speed = 3;
+            xetim.Speed = 2;
 
             enemyList.Add(xetim);
             enemyList.Add(xetai);
@@ -108,25 +121,25 @@ namespace Game_Dua_Xe
             coin1.Image = Game_Dua_Xe.Properties.Resources.coin;
             coin1.Location = new Point(-100, 50);
             coin1.Size = new Size(18, 20);
-            coin1.Speed = 3;
+            coin1.Speed = 2;
 
             PhuongTien coin2 = new PhuongTien();
             coin2.Image = Game_Dua_Xe.Properties.Resources.coin;
             coin2.Location = new Point(-80, 50);
             coin2.Size = new Size(18, 20);
-            coin2.Speed = 3;
+            coin2.Speed = 2;
 
             PhuongTien coin3 = new PhuongTien();
             coin3.Image = Game_Dua_Xe.Properties.Resources.coin;
             coin3.Location = new Point(-60, 50);
             coin3.Size = new Size(18, 20);
-            coin3.Speed = 3;
+            coin3.Speed = 2;
 
             PhuongTien coin4 = new PhuongTien();
             coin4.Image = Game_Dua_Xe.Properties.Resources.coin;
             coin4.Location = new Point(-20, 50);
             coin4.Size = new Size(18, 20);
-            coin4.Speed = 3;
+            coin4.Speed = 2;
 
             coinList.Add(coin1);
             coinList.Add(coin2);
@@ -142,82 +155,53 @@ namespace Game_Dua_Xe
             leftLine.SendToBack();
             RightLine.SendToBack();
 
-            //
+            //Bắt đầu với Normal State
             MyCar.TransitionTo(new NormalState());
             MyCar.Moving();
         }
-        private void tmmain_Tick(object sender, EventArgs e)
-        {
-            lbState.Text = MyCar.StateString;
-            moveLine(5);
-            enemyMove();
-            coinMove();
-            TinhDiem();
-            gameOver();
-        }
-        private void moveLine(int speed)
-        {
-            if (line1.Top >= 380)
-                line1.Top = -50;
-            else
-                line1.Top += speed;
 
-            if (line2.Top >= 380)
-                line2.Top = -50;
-            else
-                line2.Top += speed;
-
-            if (line3.Top >= 380)
-                line3.Top = -50;
-            else
-                line3.Top += speed;
-
-            if (line4.Top >= 380)
-                line4.Top = -50;
-            else
-                line4.Top += speed;
-        }
-
+        //Event khi di ấn các phím di chuyển
         private void frmMain_KeyDown(object sender, KeyEventArgs e)
         {
+            // Không làm gì nếu game đã kết thúc
             if (isGameOver)
                 return;
 
+            // nhấn button Up
             if(e.KeyCode == Keys.W || e.KeyCode == Keys.Up)
             {
-                MyCar._Up = true; 
+                MyCar._Up = true;
             }
 
-            if(e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
+            //Nhấn Button Down
+            else if(e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
             {
                 MyCar._Down = true;
             }
 
-            if(e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
+            // Nhấn button left
+            else if(e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
             {
                 MyCar._Left = true;
             }
 
-            if(e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
+            //Nhấn button right
+            else if(e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
             {
                 MyCar._Right = true;
             }
 
-            if (!isGameOver)
-            {
-                MyCar.Moving();
-                lbState.Text = MyCar.StateString;
-            }
-            tmcar.Start();
+            // Gọi hàm Move
+            MyCar.Moving();
+
+            //thay đổi text box
+            lbState.Text = MyCar.getState();
+
+            //gọi timer di chuyển xe
+            timerCar.Start();
                 
         }
-
-        private void tmcar_Tick(object sender, EventArgs e)
-        {
-            MyCar.Moving();
-            lbState.Text = MyCar.StateString;
-        }
-
+        //Event khi 
         private void frmMain_KeyUp(object sender, KeyEventArgs e)
         {
             if (isGameOver)
@@ -246,40 +230,78 @@ namespace Game_Dua_Xe
             if (!(MyCar._Up || MyCar._Down || MyCar._Left || MyCar._Right))
             {
                 MyCar.Image = Game_Dua_Xe.Properties.Resources.police;
-                tmcar.Stop();
+                timerCar.Stop();
             }
+        }
+
+        //Event nhấn button start game
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            tmBatDau.Start();
+            btnStart.Enabled = false;
+            btnRestart.Enabled = false;
+        }
+        //Restart
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
 
         private Random random = new Random();
-        private void enemyMove()
+        //Di chuyển vạch phân cách
+        private void moveLine(int speed)
         {
-            foreach (PhuongTien item in enemyList)
-            {
-                if (item.Top >= 500)
-                {
-                    Relocation(item);
-                }
-                else
-                {
-                    item.Move();
-                }
-            }
-        }
+            if (line1.Top >= 380)
+                line1.Top = -50;
+            else
+                line1.Top += speed;
 
-        private void coinMove()
+            if (line2.Top >= 380)
+                line2.Top = -50;
+            else
+                line2.Top += speed;
+
+            if (line3.Top >= 380)
+                line3.Top = -50;
+            else
+                line3.Top += speed;
+
+            if (line4.Top >= 380)
+                line4.Top = -50;
+            else
+                line4.Top += speed;
+        }
+        //Di chuyển các enemy và coin
+        private void MovingPhuongtien()
         {
-            foreach (PhuongTien item in coinList)
+            foreach (PhuongTien enemy in enemyList)
             {
-                if (item.Top >= 500)
+                //Nếu ra khỏi khu vực màn hình game thì sẽ Relocate phương tiện đó lại
+                if (enemy.Top >= 500)
                 {
-                    Relocation(item);
+                    Relocation(enemy);
+                }
+                //Di chuyển phương tiện xuống dưới
+                else
+                {
+                    enemy.Move();
+                }
+            }
+
+            foreach (PhuongTien coin in coinList)
+            {
+                if (coin.Top >= 500)
+                {
+                    Relocation(coin);
                 }
                 else
                 {
-                    item.Move();
+                    coin.Move();
                 }
             }
+
         }
+        //Relocate lại phương tiện
         private void Relocation(PhuongTien phuongTien)
         {
             do
@@ -287,6 +309,7 @@ namespace Game_Dua_Xe
                 phuongTien.ReLocation();
             } while (IsIntersect(phuongTien));
         }
+        //Tăng điểm khi ăn được tiền
         private void TinhDiem()
         {
             foreach (PhuongTien item in coinList)
@@ -299,6 +322,7 @@ namespace Game_Dua_Xe
                 }
             }
         }
+        //Kết thúc game nếu va chạm vào enemy
         private void gameOver()
         {
             foreach (PhuongTien item in enemyList)
@@ -308,12 +332,12 @@ namespace Game_Dua_Xe
                     item.SendToBack();
                     MyCar.isOver = true;
                     MyCar.Image = Game_Dua_Xe.Properties.Resources.boom;
-                    MyCar.Moving();
-                    lbState.Text = MyCar.StateString;
+                    lbState.Text = MyCar.getState();
                     item.Image = Game_Dua_Xe.Properties.Resources.boom;
                     MyCar.Size = new Size(80, 80);
-                    tmmain.Enabled = false;
-                    tmcar.Enabled = false;
+                    timerMain.Enabled = false;
+                    timerCar.Enabled = false;
+
                     lbgameover.BringToFront();
                     lbgameover.Text = "Game Over\nYour score: " + score;
                     lbgameover.Visible = true;
@@ -323,7 +347,7 @@ namespace Game_Dua_Xe
                 }
             }
         }
-
+        //Kiểm tra xem phương tiện truyền vào có intersect với bất kỳ phương tiện khác hay không
         private bool IsIntersect(PhuongTien phuongTien)
         {
             foreach (PhuongTien item in coinList)
@@ -350,18 +374,6 @@ namespace Game_Dua_Xe
             return false;  
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            
-            //Init();
-            tmBatDau.Start();
-            btnStart.Enabled = false;
-            btnRestart.Enabled = false;
-        }
 
-        private void btnRestart_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
     }
 }

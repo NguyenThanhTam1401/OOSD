@@ -61,7 +61,7 @@
     <Compile Include="State\MoveState.cs" />
     <Compile Include="ConcreteState\MoveUp.cs" />
     <Compile Include="ConcreteState\NormalState.cs" />
-    <Compile Include="Context\PhuongTien.cs">
+    <Compile Include="PhuongTien.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />

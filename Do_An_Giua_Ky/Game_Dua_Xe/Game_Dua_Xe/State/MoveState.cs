@@ -10,13 +10,12 @@ namespace Game_Dua_Xe
     public abstract class MoveState
     {
         protected CarContext _CarContext;
-        public void SetCar(CarContext car)
+        public void SetContext(CarContext car)
         {
             this._CarContext = car;
         }
-
         public abstract void Move();
         public abstract void SetImage();
-        public abstract void GetStateString();
+
     }
 }

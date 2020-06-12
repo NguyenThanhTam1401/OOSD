@@ -9,29 +9,9 @@ namespace Game_Dua_Xe
 {
     public class CarContext:PhuongTien
     {
-        public string StateString;
-        // A reference to the current state of the Context.
+        //Tham chiếu đến state hiện tại của Context
         private MoveState _state = null;
 
-        public CarContext(MoveState state)
-        {
-            this.TransitionTo(state);
-        }
-
-        // The Context allows changing the State object at runtime.
-        public void TransitionTo(MoveState state)
-        {
-            Console.WriteLine($"Context: Transition to {state.GetType().Name}.");
-            this._state = state;
-            this._state.SetCar(this);
-        }
-
-        // The Context delegates part of its behavior to the current State
-        // object.
-        public void Moving()
-        {
-            this._state.Move();
-        }
         public bool _Up { get; set; }
         public bool _Down { get; set; }
         public bool _Left { get; set; }
@@ -45,6 +25,30 @@ namespace Game_Dua_Xe
             _Down = false;
             _Left = false;
             _Right = false;
+        }
+
+        public CarContext(MoveState state)
+        {
+            this.TransitionTo(state);
+        }
+
+        // Changing the State 
+        public void TransitionTo(MoveState state)
+        {
+            Console.WriteLine($"Context: Transition to {state.GetType().Name}.");
+            this._state = state;
+            this._state.SetContext(this);
+        }
+
+        // The Context delegates part of its behavior to the current State
+        public void Moving()
+        {
+            this._state.Move();
+        }
+
+        public string getState()
+        {
+            return this._state.GetType().Name;
         }
     }
 }

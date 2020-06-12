@@ -9,15 +9,22 @@ namespace Game_Dua_Xe
 {
     public class NormalState:MoveState
     {
-        public override void GetStateString()
-        {
-            this._CarContext.StateString = "Normal State";
-        }
-
         public override void Move()
         {
+            //Set image của context
             SetImage();
-            GetStateString();
+
+            StateTransit();
+        }
+
+        public override void SetImage()
+        {
+            this._CarContext.Image = Game_Dua_Xe.Properties.Resources.police;
+        }
+
+        //Phương thức chuyển trạng thái
+        private void StateTransit()
+        {
             if (this._CarContext._Up)
                 this._CarContext.TransitionTo(new MoveUp());
 
@@ -31,9 +38,5 @@ namespace Game_Dua_Xe
                 this._CarContext.TransitionTo(new MoveLeft());
         }
 
-        public override void SetImage()
-        {
-            this._CarContext.Image = Game_Dua_Xe.Properties.Resources.police;
-        }
     }
 }
