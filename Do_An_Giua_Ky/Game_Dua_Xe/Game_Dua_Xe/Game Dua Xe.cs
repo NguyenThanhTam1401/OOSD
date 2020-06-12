@@ -24,6 +24,9 @@ namespace Game_Dua_Xe
         {
             InitializeComponent();
             Init();
+
+            //Bắt đầu với Normal State
+            MyCar.TransitionTo(new NormalState());
         }
 
         // Timer chạy 3s đầu game
@@ -155,9 +158,7 @@ namespace Game_Dua_Xe
             leftLine.SendToBack();
             RightLine.SendToBack();
 
-            //Bắt đầu với Normal State
-            MyCar.TransitionTo(new NormalState());
-            MyCar.Moving();
+
         }
 
         //Event khi di ấn các phím di chuyển
@@ -327,14 +328,18 @@ namespace Game_Dua_Xe
         {
             foreach (PhuongTien item in enemyList)
             {
+                //Va chạm với xe khác
                 if (MyCar.IsIntersect(item))
                 {
+                    //
                     item.SendToBack();
                     MyCar.isOver = true;
                     MyCar.Image = Game_Dua_Xe.Properties.Resources.boom;
                     lbState.Text = MyCar.getState();
                     item.Image = Game_Dua_Xe.Properties.Resources.boom;
                     MyCar.Size = new Size(80, 80);
+                    
+                    //Dừng các timer
                     timerMain.Enabled = false;
                     timerCar.Enabled = false;
 
@@ -373,7 +378,6 @@ namespace Game_Dua_Xe
 
             return false;  
         }
-
 
     }
 }
