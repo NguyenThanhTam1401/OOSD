@@ -17,8 +17,6 @@ namespace Game_Dua_Xe
             SetImage();
             Move_Up();
 
-            
-
             StateTransit();
         }
 
