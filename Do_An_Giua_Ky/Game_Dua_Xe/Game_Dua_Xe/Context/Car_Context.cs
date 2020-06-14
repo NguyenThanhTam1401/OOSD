@@ -35,7 +35,6 @@ namespace Game_Dua_Xe
         // Changing the State 
         public void TransitionTo(MoveState state)
         {
-            Console.WriteLine($"Context: Transition to {state.GetType().Name}.");
             this._state = state;
             this._state.SetContext(this);
         }

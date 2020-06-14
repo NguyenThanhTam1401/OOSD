@@ -238,14 +238,14 @@ namespace Game_Dua_Xe
         //Event nhấn button start game
         private void btnStart_Click(object sender, EventArgs e)
         {
-            //Bắt đầu với Normal State
+            //Bắt đầu với Start State
             MyCar.TransitionTo(StartState.Instance());
 
             tmBatDau.Start();
             btnStart.Enabled = false;
             btnRestart.Enabled = false;
         }
-        
+
         //Restart
         private void btnRestart_Click(object sender, EventArgs e)
         {
