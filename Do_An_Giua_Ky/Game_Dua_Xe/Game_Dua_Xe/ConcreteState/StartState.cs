@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace Game_Dua_Xe
 {
-    public class NormalState:MoveState
+    public class StartState:MoveState
     {
-        private static NormalState _instance;
-        protected NormalState()
+        private static StartState _instance;
+        protected StartState()
         {
 
         }
-        public static NormalState Instance()
+        public static StartState Instance()
         {
             if(_instance == null)
             {
-                _instance = new NormalState();
+                _instance = new StartState();
             }
             return _instance;
         }
@@ -36,7 +36,7 @@ namespace Game_Dua_Xe
         }
 
         //Phương thức chuyển trạng thái
-        private void StateTransit()
+        public override void StateTransit()
         {
             if (this._CarContext._Up)
                 this._CarContext.TransitionTo(MoveUp.Instance());

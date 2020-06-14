@@ -31,9 +31,9 @@ namespace Game_Dua_Xe
             SetImage();
             Move_Right();
 
-            
 
-            StateStransit();
+
+            StateTransit();
         }
 
         private void Move_Right()
@@ -41,7 +41,7 @@ namespace Game_Dua_Xe
             if (this._CarContext.Right < 280)
                 this._CarContext.Left += this._CarContext.Speed;
         }
-        private void StateStransit()
+        public override void StateTransit()
         {
             if (this._CarContext._Up)
                 this._CarContext.TransitionTo(MoveUp.Instance());

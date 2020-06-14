@@ -226,7 +226,7 @@
             this.lbState.AutoSize = true;
             this.lbState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbState.ForeColor = System.Drawing.Color.Red;
-            this.lbState.Location = new System.Drawing.Point(400, 290);
+            this.lbState.Location = new System.Drawing.Point(419, 290);
             this.lbState.Name = "lbState";
             this.lbState.Size = new System.Drawing.Size(63, 25);
             this.lbState.TabIndex = 3;

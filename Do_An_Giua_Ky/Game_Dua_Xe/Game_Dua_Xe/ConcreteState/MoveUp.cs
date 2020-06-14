@@ -28,7 +28,9 @@ namespace Game_Dua_Xe
             //không làm gì nếu đã kết thúc!
             if (this._CarContext.isOver)
                 return;
+
             SetImage();
+
             Move_Up();
 
             StateTransit();
@@ -39,6 +41,7 @@ namespace Game_Dua_Xe
         {
             this._CarContext.Image = Game_Dua_Xe.Properties.Resources.police;
         }
+
         //Dời vị trí của Xe lên.
         private void Move_Up()
         {
@@ -47,7 +50,7 @@ namespace Game_Dua_Xe
         }
         
         //Chuyển qua các sate khác
-        private void StateTransit()
+        public override void StateTransit()
         {
             if (this._CarContext._Down)
                 this._CarContext.TransitionTo(MoveDown.Instance());

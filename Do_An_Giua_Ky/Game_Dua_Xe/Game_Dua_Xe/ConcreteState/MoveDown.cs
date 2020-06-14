@@ -32,10 +32,9 @@ namespace Game_Dua_Xe
             Move_Down();
 
             StateTransit();
-
         }
 
-        private void StateTransit()
+        public override void StateTransit()
         {
             if (this._CarContext._Up)
                 this._CarContext.TransitionTo(MoveUp.Instance());

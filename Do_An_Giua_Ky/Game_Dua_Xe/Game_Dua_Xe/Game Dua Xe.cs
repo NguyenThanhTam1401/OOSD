@@ -25,8 +25,6 @@ namespace Game_Dua_Xe
             InitializeComponent();
             Init();
 
-            //Bắt đầu với Normal State
-            MyCar.TransitionTo(NormalState.Instance());
         }
 
         // Timer chạy 3s đầu game
@@ -63,6 +61,7 @@ namespace Game_Dua_Xe
         private void timerCar_Tick(object sender, EventArgs e)
         {
             MyCar.Moving();
+
             lbState.Text = MyCar.getState();
         }
 
@@ -239,10 +238,14 @@ namespace Game_Dua_Xe
         //Event nhấn button start game
         private void btnStart_Click(object sender, EventArgs e)
         {
+            //Bắt đầu với Normal State
+            MyCar.TransitionTo(StartState.Instance());
+
             tmBatDau.Start();
             btnStart.Enabled = false;
             btnRestart.Enabled = false;
         }
+        
         //Restart
         private void btnRestart_Click(object sender, EventArgs e)
         {

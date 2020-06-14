@@ -14,8 +14,13 @@ namespace Game_Dua_Xe
         {
             this._CarContext = car;
         }
+        // Thực hiện di chuyển vị trí của Xe
         public abstract void Move();
+
+        // Set image chô mỗi state
         public abstract void SetImage();
 
+        // Chuyển sang state khác
+        public abstract void StateTransit();
     }
 }
