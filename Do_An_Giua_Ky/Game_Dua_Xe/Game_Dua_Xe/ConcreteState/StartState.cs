@@ -9,6 +9,19 @@ namespace Game_Dua_Xe
 {
     public class NormalState:MoveState
     {
+        private static NormalState _instance;
+        protected NormalState()
+        {
+
+        }
+        public static NormalState Instance()
+        {
+            if(_instance == null)
+            {
+                _instance = new NormalState();
+            }
+            return _instance;
+        }
         public override void Move()
         {
             //Set image của context
@@ -26,16 +39,16 @@ namespace Game_Dua_Xe
         private void StateTransit()
         {
             if (this._CarContext._Up)
-                this._CarContext.TransitionTo(new MoveUp());
+                this._CarContext.TransitionTo(MoveUp.Instance());
 
             else if (this._CarContext._Down)
-                this._CarContext.TransitionTo(new MoveDown());
+                this._CarContext.TransitionTo(MoveDown.Instance());
 
             else if (this._CarContext._Right)
-                this._CarContext.TransitionTo(new MoveRight());
+                this._CarContext.TransitionTo(MoveRight.Instance());
 
             else if (this._CarContext._Left)
-                this._CarContext.TransitionTo(new MoveLeft());
+                this._CarContext.TransitionTo(MoveLeft.Instance());
         }
 
     }

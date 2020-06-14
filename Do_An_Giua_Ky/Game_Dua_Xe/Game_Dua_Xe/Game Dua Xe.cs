@@ -26,7 +26,7 @@ namespace Game_Dua_Xe
             Init();
 
             //Bắt đầu với Normal State
-            MyCar.TransitionTo(new NormalState());
+            MyCar.TransitionTo(NormalState.Instance());
         }
 
         // Timer chạy 3s đầu game
@@ -74,6 +74,7 @@ namespace Game_Dua_Xe
             this.score = 0;
             igiay = 30;
             lbgameover.Visible = false;
+            lbState.Text = "";
             coinList = new List<PhuongTien>();
             enemyList = new List<PhuongTien>();
             MyCar = new CarContext();

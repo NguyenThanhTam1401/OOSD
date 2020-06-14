@@ -9,6 +9,20 @@ namespace Game_Dua_Xe
 {
     public class MoveLeft:MoveState
     {
+        private static MoveLeft _instance;
+        protected MoveLeft()
+        {
+
+        }
+        public static MoveLeft Instance()
+        {
+            if (_instance == null)
+            {
+                _instance = new MoveLeft();
+            }
+            return _instance;
+        }
+
         public override void Move()
         {
             if (this._CarContext.isOver)
@@ -24,13 +38,13 @@ namespace Game_Dua_Xe
         private void StateTransit()
         {
             if (this._CarContext._Up)
-                this._CarContext.TransitionTo(new MoveUp());
+                this._CarContext.TransitionTo(MoveUp.Instance());
 
             else if (this._CarContext._Down)
-                this._CarContext.TransitionTo(new MoveDown());
+                this._CarContext.TransitionTo(MoveDown.Instance());
 
             else if (this._CarContext._Right)
-                this._CarContext.TransitionTo(new MoveRight());
+                this._CarContext.TransitionTo(MoveRight.Instance());
         }
         private void Move_Left()
         {
