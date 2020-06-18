@@ -1,0 +1,86 @@
+﻿using Project_Restaurant.DataLayers;
+using Project_Restaurant.Models;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Project_Restaurant.BusinessLayers
+{
+    public class BLVoucher
+    {
+        public BLVoucher()
+        {
+        }
+        public int GetValueSale(string code)
+        {
+            int value = 0;
+            string query = "EXEC GetValueSale @code";
+
+            DataSet ds = DataProvider.Instance.ExecuteQueryDS(query, CommandType.Text, new object[] { code });
+            DataTable dt = new DataTable();
+            dt = ds.Tables[0];
+            try
+            {
+                value = Convert.ToInt32(dt.Rows[0]["VALUE"]);
+            }
+            catch
+            {
+                value = 0;
+            }
+            return value;
+        }
+
+        public Voucher GetVoucher(string code)
+        {
+            string query = "EXEC GetVoucher @code";
+            DataSet ds = DataProvider.Instance.ExecuteQueryDS(query, CommandType.Text, new object[] { code });
+            DataTable dt = new DataTable();
+            dt = ds.Tables[0];
+            Voucher vc = null;
+            try
+            {
+                vc = new Voucher(dt.Rows[0]);
+            }
+            catch { }
+            return vc;
+        }
+
+        public bool InsertVoucher(string code, string name, int giatri, DateTime ngayhethan, ref string err)
+        {
+            err = "";
+            string query = "EXEC InsertVoucher @code , @name , @value , @hethan";
+            return DataProvider.Instance.MyExecuteNonQuery(query, CommandType.Text, ref err, new object[] { code, name, giatri, ngayhethan });
+        }
+        public bool DeleteVoucher(int id, ref string err)
+        {
+            err = "";
+            string query = "EXEC DeleteVoucher @id";
+            return DataProvider.Instance.MyExecuteNonQuery(query, CommandType.Text, ref err, new object[] { id });
+        }
+        public bool UpdateVoucher(int id, string code, string name, int giatri, DateTime ngayhethan, ref string err)
+        {
+            err = "";
+            string query = "EXEC EditVoucher @id , @code , @name , @giatri , @ngayhethan";
+            return DataProvider.Instance.MyExecuteNonQuery(query, CommandType.Text, ref err, new object[] { id, code, name, giatri, ngayhethan });
+
+        }
+        public DataTable GetListVoucher()
+        {
+            string query = "SELECT * FROM VOUCHER";
+            DataSet ds = DataProvider.Instance.ExecuteQueryDS(query, CommandType.Text);
+            return ds.Tables[0];
+        }
+
+        public string GetNameVoucherFromBill(int idbill)
+        {
+            string query = "EXEC GetNameVoucher @id";
+            DataSet ds = DataProvider.Instance.ExecuteQueryDS(query, CommandType.Text, new object[] { idbill });
+            DataTable dt = new DataTable();
+            dt = ds.Tables[0];
+            return dt.Rows[0]["NAME"].ToString();
+        }
+    }
+}

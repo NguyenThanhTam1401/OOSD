@@ -61,5 +61,10 @@ namespace Project_Restaurant
         {
             this.Close();
         }
+
+        private void uC_EditAccount1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,5 +39,6 @@ namespace Project_Restaurant.UserControls
                 panel2.BackColor = Color.FromArgb(rd.Next(0, 255), rd.Next(0, 255), rd.Next(0, 255));
             }
         }
+
     }
 }

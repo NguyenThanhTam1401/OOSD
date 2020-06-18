@@ -46,174 +46,198 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BusinessLayers\BLAccount.cs" />
+    <Compile Include="BusinessLayers\BLArea.cs" />
+    <Compile Include="BusinessLayers\BLBill.cs" />
+    <Compile Include="BusinessLayers\BLBillInfo.cs" />
+    <Compile Include="BusinessLayers\BLFood.cs" />
+    <Compile Include="BusinessLayers\BLFoodTable.cs" />
+    <Compile Include="BusinessLayers\BLFoodType.cs" />
+    <Compile Include="BusinessLayers\BLNhanVien.cs" />
+    <Compile Include="BusinessLayers\BLSupplier.cs" />
+    <Compile Include="BusinessLayers\BLVoucher.cs" />
+    <Compile Include="BusinessLayers\BLWork.cs" />
+    <Compile Include="DataLayers\DataProvider.cs" />
+    <Compile Include="PresentationLayers\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="PresentationLayers\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAccount.cs">
+    <Compile Include="PresentationLayers\frmAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAccount.Designer.cs">
+    <Compile Include="PresentationLayers\frmAccount.Designer.cs">
       <DependentUpon>frmAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAccountInfo.cs">
+    <Compile Include="PresentationLayers\frmAccountInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAccountInfo.Designer.cs">
+    <Compile Include="PresentationLayers\frmAccountInfo.Designer.cs">
       <DependentUpon>frmAccountInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEmployeer.cs">
+    <Compile Include="PresentationLayers\frmEmployeer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEmployeer.Designer.cs">
+    <Compile Include="PresentationLayers\frmEmployeer.Designer.cs">
       <DependentUpon>frmEmployeer.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmFoodManager.cs">
+    <Compile Include="PresentationLayers\frmFoodManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFoodManager.Designer.cs">
+    <Compile Include="PresentationLayers\frmFoodManager.Designer.cs">
       <DependentUpon>frmFoodManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManager.cs">
+    <Compile Include="PresentationLayers\frmManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManager.Designer.cs">
+    <Compile Include="PresentationLayers\frmManager.Designer.cs">
       <DependentUpon>frmManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStatistical.cs">
+    <Compile Include="PresentationLayers\frmStatistical.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStatistical.Designer.cs">
+    <Compile Include="PresentationLayers\frmStatistical.Designer.cs">
       <DependentUpon>frmStatistical.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTable.cs">
+    <Compile Include="PresentationLayers\frmTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTable.Designer.cs">
+    <Compile Include="PresentationLayers\frmTable.Designer.cs">
       <DependentUpon>frmTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTableManager.cs">
+    <Compile Include="PresentationLayers\frmTableManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTableManager.Designer.cs">
+    <Compile Include="PresentationLayers\frmTableManager.Designer.cs">
       <DependentUpon>frmTableManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVoucher.cs">
+    <Compile Include="PresentationLayers\frmVoucher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVoucher.Designer.cs">
+    <Compile Include="PresentationLayers\frmVoucher.Designer.cs">
       <DependentUpon>frmVoucher.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWorking.cs">
+    <Compile Include="PresentationLayers\frmWorking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWorking.Designer.cs">
+    <Compile Include="PresentationLayers\frmWorking.Designer.cs">
       <DependentUpon>frmWorking.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWorkStatiscal.cs">
+    <Compile Include="PresentationLayers\frmWorkStatiscal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWorkStatiscal.Designer.cs">
+    <Compile Include="PresentationLayers\frmWorkStatiscal.Designer.cs">
       <DependentUpon>frmWorkStatiscal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Area.cs" />
+    <Compile Include="Models\Bill.cs" />
+    <Compile Include="Models\BillInfo.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\FoodType.cs" />
+    <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="Models\OrderedViewModel.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\Table.cs" />
+    <Compile Include="Models\Voucher.cs" />
+    <Compile Include="Models\Work.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\UC_AccountInfo.cs">
+    <Compile Include="PresentationLayers\UserControls\UC_AccountInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_AccountInfo.Designer.cs">
+    <Compile Include="PresentationLayers\UserControls\UC_AccountInfo.Designer.cs">
       <DependentUpon>UC_AccountInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Administrator.cs">
+    <Compile Include="PresentationLayers\UserControls\UC_Administrator.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Administrator.Designer.cs">
+    <Compile Include="PresentationLayers\UserControls\UC_Administrator.Designer.cs">
       <DependentUpon>UC_Administrator.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\uC_Area.cs">
+    <Compile Include="PresentationLayers\UserControls\uC_Area.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\uC_Area.Designer.cs">
+    <Compile Include="PresentationLayers\UserControls\uC_Area.Designer.cs">
       <DependentUpon>uC_Area.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Catelog.cs">
+    <Compile Include="PresentationLayers\UserControls\UC_Catelog.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Catelog.Designer.cs">
+    <Compile Include="PresentationLayers\UserControls\UC_Catelog.Designer.cs">
       <DependentUpon>UC_Catelog.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_EditAccount.cs">
+    <Compile Include="PresentationLayers\UserControls\UC_EditAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_EditAccount.Designer.cs">
+    <Compile Include="PresentationLayers\UserControls\UC_EditAccount.Designer.cs">
       <DependentUpon>UC_EditAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_FoodManager.cs">
+    <Compile Include="PresentationLayers\UserControls\UC_FoodManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_FoodManager.Designer.cs">
+    <Compile Include="PresentationLayers\UserControls\UC_FoodManager.Designer.cs">
       <DependentUpon>UC_FoodManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Supplier.cs">
+    <Compile Include="PresentationLayers\UserControls\UC_Supplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Supplier.Designer.cs">
+    <Compile Include="PresentationLayers\UserControls\UC_Supplier.Designer.cs">
       <DependentUpon>UC_Supplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\uC_Table.cs">
+    <Compile Include="PresentationLayers\UserControls\uC_Table.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\uC_Table.Designer.cs">
+    <Compile Include="PresentationLayers\UserControls\uC_Table.Designer.cs">
       <DependentUpon>uC_Table.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\uC_Work.cs">
+    <Compile Include="PresentationLayers\UserControls\uC_Work.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\uC_Work.Designer.cs">
+    <Compile Include="PresentationLayers\UserControls\uC_Work.Designer.cs">
       <DependentUpon>uC_Work.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\uC_WorkTime.cs">
+    <Compile Include="PresentationLayers\UserControls\uC_WorkTime.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\uC_WorkTime.Designer.cs">
+    <Compile Include="PresentationLayers\UserControls\uC_WorkTime.Designer.cs">
       <DependentUpon>uC_WorkTime.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="PresentationLayers\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAccount.resx">
+    <EmbeddedResource Include="PresentationLayers\frmAccount.resx">
       <DependentUpon>frmAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAccountInfo.resx">
+    <EmbeddedResource Include="PresentationLayers\frmAccountInfo.resx">
       <DependentUpon>frmAccountInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEmployeer.resx">
+    <EmbeddedResource Include="PresentationLayers\frmEmployeer.resx">
       <DependentUpon>frmEmployeer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmFoodManager.resx">
+    <EmbeddedResource Include="PresentationLayers\frmFoodManager.resx">
       <DependentUpon>frmFoodManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManager.resx">
+    <EmbeddedResource Include="PresentationLayers\frmManager.resx">
       <DependentUpon>frmManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStatistical.resx">
+    <EmbeddedResource Include="PresentationLayers\frmStatistical.resx">
       <DependentUpon>frmStatistical.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTable.resx">
+    <EmbeddedResource Include="PresentationLayers\frmTable.resx">
       <DependentUpon>frmTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTableManager.resx">
+    <EmbeddedResource Include="PresentationLayers\frmTableManager.resx">
       <DependentUpon>frmTableManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVoucher.resx">
+    <EmbeddedResource Include="PresentationLayers\frmVoucher.resx">
       <DependentUpon>frmVoucher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWorking.resx">
+    <EmbeddedResource Include="PresentationLayers\frmWorking.resx">
       <DependentUpon>frmWorking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWorkStatiscal.resx">
+    <EmbeddedResource Include="PresentationLayers\frmWorkStatiscal.resx">
       <DependentUpon>frmWorkStatiscal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -225,34 +249,34 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControls\UC_AccountInfo.resx">
+    <EmbeddedResource Include="PresentationLayers\UserControls\UC_AccountInfo.resx">
       <DependentUpon>UC_AccountInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Administrator.resx">
+    <EmbeddedResource Include="PresentationLayers\UserControls\UC_Administrator.resx">
       <DependentUpon>UC_Administrator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\uC_Area.resx">
+    <EmbeddedResource Include="PresentationLayers\UserControls\uC_Area.resx">
       <DependentUpon>uC_Area.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Catelog.resx">
+    <EmbeddedResource Include="PresentationLayers\UserControls\UC_Catelog.resx">
       <DependentUpon>UC_Catelog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_EditAccount.resx">
+    <EmbeddedResource Include="PresentationLayers\UserControls\UC_EditAccount.resx">
       <DependentUpon>UC_EditAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_FoodManager.resx">
+    <EmbeddedResource Include="PresentationLayers\UserControls\UC_FoodManager.resx">
       <DependentUpon>UC_FoodManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Supplier.resx">
+    <EmbeddedResource Include="PresentationLayers\UserControls\UC_Supplier.resx">
       <DependentUpon>UC_Supplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\uC_Table.resx">
+    <EmbeddedResource Include="PresentationLayers\UserControls\uC_Table.resx">
       <DependentUpon>uC_Table.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\uC_Work.resx">
+    <EmbeddedResource Include="PresentationLayers\UserControls\uC_Work.resx">
       <DependentUpon>uC_Work.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\uC_WorkTime.resx">
+    <EmbeddedResource Include="PresentationLayers\UserControls\uC_WorkTime.resx">
       <DependentUpon>uC_WorkTime.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -268,5 +292,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

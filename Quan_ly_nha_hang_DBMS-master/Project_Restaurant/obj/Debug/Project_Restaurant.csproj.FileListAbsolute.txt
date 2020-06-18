@@ -28,3 +28,34 @@ D:\HK 2 nam 3\TKHDT\github\Project_Restaurant\obj\Debug\Project_Restaurant.frmWo
 D:\HK 2 nam 3\TKHDT\github\Project_Restaurant\obj\Debug\Project_Restaurant.UserControls.uC_Work.resources
 D:\HK 2 nam 3\TKHDT\github\Project_Restaurant\obj\Debug\Project_Restaurant.UserControls.uC_WorkTime.resources
 D:\HK 2 nam 3\TKHDT\github\Project_Restaurant\obj\Debug\Project_Restaurant.frmTableManager.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\bin\Debug\Project_Restaurant.exe.config
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\bin\Debug\Project_Restaurant.exe
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\bin\Debug\Project_Restaurant.pdb
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.csprojAssemblyReference.cache
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.Form1.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.frmAccount.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.frmAccountInfo.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.frmEmployeer.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.frmFoodManager.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.frmManager.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.frmStatistical.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.frmTable.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.frmTableManager.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.frmVoucher.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.frmWorking.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.frmWorkStatiscal.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.Properties.Resources.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.UserControls.UC_AccountInfo.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.UserControls.UC_Administrator.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.UserControls.uC_Area.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.UserControls.UC_Catelog.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.UserControls.UC_EditAccount.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.UserControls.UC_FoodManager.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.UserControls.UC_Supplier.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.UserControls.uC_Table.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.UserControls.uC_Work.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.UserControls.uC_WorkTime.resources
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.csproj.GenerateResource.cache
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.csproj.CoreCompileInputs.cache
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.exe
+D:\Github\OOSD\Quan_ly_nha_hang_DBMS-master\Project_Restaurant\obj\Debug\Project_Restaurant.pdb
