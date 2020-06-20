@@ -1,4 +1,4 @@
-﻿namespace Project_Restaurant.UserControls
+﻿namespace Project_Restaurant.PresentationLayers.UserControls
 {
     partial class UC_AccountInfo
     {
@@ -29,310 +29,297 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tbxS = new System.Windows.Forms.Label();
+            this.lbsta = new System.Windows.Forms.Label();
+            this.lbposi = new System.Windows.Forms.Label();
+            this.lbphone = new System.Windows.Forms.Label();
+            this.lbadd = new System.Windows.Forms.Label();
+            this.identity = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbxShift = new System.Windows.Forms.TextBox();
+            this.tbxStartDate = new System.Windows.Forms.TextBox();
+            this.tbxPosition = new System.Windows.Forms.TextBox();
+            this.tbxPhone = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tbxAddress = new System.Windows.Forms.TextBox();
+            this.tbxIdentity = new System.Windows.Forms.TextBox();
+            this.tbxBirthDay = new System.Windows.Forms.TextBox();
+            this.tbxGender = new System.Windows.Forms.TextBox();
+            this.tbxId = new System.Windows.Forms.TextBox();
+            this.tbxName = new System.Windows.Forms.TextBox();
+            this.tbxUsername = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // panel3
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(153, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 30);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.panel3.Location = new System.Drawing.Point(400, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 578);
+            this.panel3.TabIndex = 76;
             // 
-            // textBox2
+            // panel2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(153, 135);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 30);
-            this.textBox2.TabIndex = 1;
+            this.panel2.Location = new System.Drawing.Point(428, 47);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 487);
+            this.panel2.TabIndex = 75;
             // 
-            // textBox3
+            // panel1
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(153, 230);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(198, 30);
-            this.textBox3.TabIndex = 2;
+            this.panel1.Location = new System.Drawing.Point(368, 47);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 487);
+            this.panel1.TabIndex = 74;
             // 
-            // textBox4
+            // tbxS
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(153, 318);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(198, 30);
-            this.textBox4.TabIndex = 3;
+            this.tbxS.AutoSize = true;
+            this.tbxS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.tbxS.Location = new System.Drawing.Point(451, 416);
+            this.tbxS.Name = "tbxS";
+            this.tbxS.Size = new System.Drawing.Size(63, 25);
+            this.tbxS.TabIndex = 73;
+            this.tbxS.Text = "Shift:";
             // 
-            // textBox5
+            // lbsta
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(153, 411);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(198, 30);
-            this.textBox5.TabIndex = 4;
+            this.lbsta.AutoSize = true;
+            this.lbsta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbsta.Location = new System.Drawing.Point(451, 322);
+            this.lbsta.Name = "lbsta";
+            this.lbsta.Size = new System.Drawing.Size(113, 25);
+            this.lbsta.TabIndex = 72;
+            this.lbsta.Text = "Start date:";
             // 
-            // textBox6
+            // lbposi
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(153, 503);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(198, 30);
-            this.textBox6.TabIndex = 5;
+            this.lbposi.AutoSize = true;
+            this.lbposi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbposi.Location = new System.Drawing.Point(20, 235);
+            this.lbposi.Name = "lbposi";
+            this.lbposi.Size = new System.Drawing.Size(96, 25);
+            this.lbposi.TabIndex = 71;
+            this.lbposi.Text = "Position:";
             // 
-            // textBox7
+            // lbphone
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(572, 503);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(198, 30);
-            this.textBox7.TabIndex = 11;
+            this.lbphone.AutoSize = true;
+            this.lbphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbphone.Location = new System.Drawing.Point(451, 230);
+            this.lbphone.Name = "lbphone";
+            this.lbphone.Size = new System.Drawing.Size(81, 25);
+            this.lbphone.TabIndex = 70;
+            this.lbphone.Text = "Phone:";
             // 
-            // textBox8
+            // lbadd
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(572, 411);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(198, 30);
-            this.textBox8.TabIndex = 10;
+            this.lbadd.AutoSize = true;
+            this.lbadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbadd.Location = new System.Drawing.Point(451, 140);
+            this.lbadd.Name = "lbadd";
+            this.lbadd.Size = new System.Drawing.Size(99, 25);
+            this.lbadd.TabIndex = 69;
+            this.lbadd.Text = "Address:";
             // 
-            // textBox9
+            // identity
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(572, 318);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(198, 30);
-            this.textBox9.TabIndex = 9;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(572, 230);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(198, 30);
-            this.textBox10.TabIndex = 8;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(572, 135);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(198, 30);
-            this.textBox11.TabIndex = 7;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(572, 47);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(198, 30);
-            this.textBox12.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.Location = new System.Drawing.Point(29, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "User:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.Location = new System.Drawing.Point(29, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 25);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Name:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label3.Location = new System.Drawing.Point(29, 235);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 25);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Role:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label4.Location = new System.Drawing.Point(29, 321);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 25);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "ID:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label5.Location = new System.Drawing.Point(29, 416);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 25);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Gender:";
+            this.identity.AutoSize = true;
+            this.identity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.identity.Location = new System.Drawing.Point(451, 52);
+            this.identity.Name = "identity";
+            this.identity.Size = new System.Drawing.Size(89, 25);
+            this.identity.TabIndex = 68;
+            this.identity.Text = "Identity:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label6.Location = new System.Drawing.Point(29, 508);
+            this.label6.Location = new System.Drawing.Point(27, 508);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 25);
-            this.label6.TabIndex = 17;
+            this.label6.TabIndex = 67;
             this.label6.Text = "Birth Day:";
             // 
-            // label7
+            // label5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label7.Location = new System.Drawing.Point(464, 52);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 25);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "CMND:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label5.Location = new System.Drawing.Point(27, 416);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 25);
+            this.label5.TabIndex = 66;
+            this.label5.Text = "Gender:";
             // 
-            // label8
+            // label4
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label8.Location = new System.Drawing.Point(464, 140);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 25);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Address:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.Location = new System.Drawing.Point(27, 321);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 25);
+            this.label4.TabIndex = 65;
+            this.label4.Text = "ID:";
             // 
-            // label9
+            // label2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label9.Location = new System.Drawing.Point(464, 230);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 25);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Phone:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.Location = new System.Drawing.Point(27, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 25);
+            this.label2.TabIndex = 64;
+            this.label2.Text = "Name:";
             // 
-            // label10
+            // label1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label10.Location = new System.Drawing.Point(464, 323);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 25);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Vị Trí:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.Location = new System.Drawing.Point(27, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 25);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "User:";
             // 
-            // label11
+            // tbxShift
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label11.Location = new System.Drawing.Point(464, 414);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 25);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Vị Trí:";
+            this.tbxShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxShift.Location = new System.Drawing.Point(578, 411);
+            this.tbxShift.Name = "tbxShift";
+            this.tbxShift.ReadOnly = true;
+            this.tbxShift.Size = new System.Drawing.Size(198, 30);
+            this.tbxShift.TabIndex = 62;
             // 
-            // label12
+            // tbxStartDate
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label12.Location = new System.Drawing.Point(464, 508);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 25);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Vị Trí:";
+            this.tbxStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxStartDate.Location = new System.Drawing.Point(578, 319);
+            this.tbxStartDate.Name = "tbxStartDate";
+            this.tbxStartDate.ReadOnly = true;
+            this.tbxStartDate.Size = new System.Drawing.Size(198, 30);
+            this.tbxStartDate.TabIndex = 61;
             // 
-            // panel1
+            // tbxPosition
             // 
-            this.panel1.Location = new System.Drawing.Point(374, 47);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 487);
-            this.panel1.TabIndex = 24;
+            this.tbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxPosition.Location = new System.Drawing.Point(147, 230);
+            this.tbxPosition.Name = "tbxPosition";
+            this.tbxPosition.ReadOnly = true;
+            this.tbxPosition.Size = new System.Drawing.Size(198, 30);
+            this.tbxPosition.TabIndex = 60;
             // 
-            // panel2
+            // tbxPhone
             // 
-            this.panel2.Location = new System.Drawing.Point(434, 47);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 487);
-            this.panel2.TabIndex = 25;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(406, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 578);
-            this.panel3.TabIndex = 26;
+            this.tbxPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxPhone.Location = new System.Drawing.Point(578, 230);
+            this.tbxPhone.Name = "tbxPhone";
+            this.tbxPhone.ReadOnly = true;
+            this.tbxPhone.Size = new System.Drawing.Size(198, 30);
+            this.tbxPhone.TabIndex = 59;
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // tbxAddress
+            // 
+            this.tbxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxAddress.Location = new System.Drawing.Point(578, 135);
+            this.tbxAddress.Name = "tbxAddress";
+            this.tbxAddress.ReadOnly = true;
+            this.tbxAddress.Size = new System.Drawing.Size(198, 30);
+            this.tbxAddress.TabIndex = 58;
+            // 
+            // tbxIdentity
+            // 
+            this.tbxIdentity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxIdentity.Location = new System.Drawing.Point(578, 47);
+            this.tbxIdentity.Name = "tbxIdentity";
+            this.tbxIdentity.ReadOnly = true;
+            this.tbxIdentity.Size = new System.Drawing.Size(198, 30);
+            this.tbxIdentity.TabIndex = 57;
+            // 
+            // tbxBirthDay
+            // 
+            this.tbxBirthDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxBirthDay.Location = new System.Drawing.Point(147, 503);
+            this.tbxBirthDay.Name = "tbxBirthDay";
+            this.tbxBirthDay.ReadOnly = true;
+            this.tbxBirthDay.Size = new System.Drawing.Size(198, 30);
+            this.tbxBirthDay.TabIndex = 56;
+            // 
+            // tbxGender
+            // 
+            this.tbxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxGender.Location = new System.Drawing.Point(147, 411);
+            this.tbxGender.Name = "tbxGender";
+            this.tbxGender.ReadOnly = true;
+            this.tbxGender.Size = new System.Drawing.Size(198, 30);
+            this.tbxGender.TabIndex = 55;
+            // 
+            // tbxId
+            // 
+            this.tbxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxId.Location = new System.Drawing.Point(147, 318);
+            this.tbxId.Name = "tbxId";
+            this.tbxId.ReadOnly = true;
+            this.tbxId.Size = new System.Drawing.Size(198, 30);
+            this.tbxId.TabIndex = 54;
+            // 
+            // tbxName
+            // 
+            this.tbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxName.Location = new System.Drawing.Point(147, 135);
+            this.tbxName.Name = "tbxName";
+            this.tbxName.ReadOnly = true;
+            this.tbxName.Size = new System.Drawing.Size(198, 30);
+            this.tbxName.TabIndex = 53;
+            // 
+            // tbxUsername
+            // 
+            this.tbxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxUsername.Location = new System.Drawing.Point(147, 47);
+            this.tbxUsername.Name = "tbxUsername";
+            this.tbxUsername.ReadOnly = true;
+            this.tbxUsername.Size = new System.Drawing.Size(198, 30);
+            this.tbxUsername.TabIndex = 52;
+            // 
             // UC_AccountInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.tbxS);
+            this.Controls.Add(this.lbsta);
+            this.Controls.Add(this.lbposi);
+            this.Controls.Add(this.lbphone);
+            this.Controls.Add(this.lbadd);
+            this.Controls.Add(this.identity);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxShift);
+            this.Controls.Add(this.tbxStartDate);
+            this.Controls.Add(this.tbxPosition);
+            this.Controls.Add(this.tbxPhone);
+            this.Controls.Add(this.tbxAddress);
+            this.Controls.Add(this.tbxIdentity);
+            this.Controls.Add(this.tbxBirthDay);
+            this.Controls.Add(this.tbxGender);
+            this.Controls.Add(this.tbxId);
+            this.Controls.Add(this.tbxName);
+            this.Controls.Add(this.tbxUsername);
             this.Name = "UC_AccountInfo";
             this.Size = new System.Drawing.Size(796, 578);
             this.ResumeLayout(false);
@@ -342,33 +329,31 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label tbxS;
+        private System.Windows.Forms.Label lbsta;
+        private System.Windows.Forms.Label lbposi;
+        private System.Windows.Forms.Label lbphone;
+        private System.Windows.Forms.Label lbadd;
+        private System.Windows.Forms.Label identity;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbxShift;
+        private System.Windows.Forms.TextBox tbxStartDate;
+        private System.Windows.Forms.TextBox tbxPosition;
+        private System.Windows.Forms.TextBox tbxPhone;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox tbxAddress;
+        private System.Windows.Forms.TextBox tbxIdentity;
+        private System.Windows.Forms.TextBox tbxBirthDay;
+        private System.Windows.Forms.TextBox tbxGender;
+        private System.Windows.Forms.TextBox tbxId;
+        private System.Windows.Forms.TextBox tbxName;
+        private System.Windows.Forms.TextBox tbxUsername;
     }
 }

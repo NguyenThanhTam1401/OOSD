@@ -16,5 +16,10 @@ namespace Project_Restaurant.UserControls
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

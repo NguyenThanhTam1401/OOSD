@@ -31,14 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFoodManager));
             this.panel1 = new System.Windows.Forms.Panel();
             this.sidepanel = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSupplier = new System.Windows.Forms.Button();
+            this.btnCategory = new System.Windows.Forms.Button();
+            this.btnFood = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_FoodManager1 = new Project_Restaurant.UserControls.UC_FoodManager();
+            this.uc_Supplier = new Project_Restaurant.UserControls.UC_Supplier();
             this.uC_Catelog1 = new Project_Restaurant.UserControls.UC_Catelog();
+            this.uC_FoodManager1 = new Project_Restaurant.UserControls.UC_FoodManager();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -48,9 +49,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.sidepanel);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnSupplier);
+            this.panel1.Controls.Add(this.btnCategory);
+            this.panel1.Controls.Add(this.btnFood);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -67,50 +68,50 @@
             this.sidepanel.Size = new System.Drawing.Size(10, 69);
             this.sidepanel.TabIndex = 5;
             // 
-            // button3
+            // btnSupplier
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(17, 515);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(205, 69);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Supplier";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.btnSupplier.FlatAppearance.BorderSize = 0;
+            this.btnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupplier.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupplier.ForeColor = System.Drawing.Color.White;
+            this.btnSupplier.Location = new System.Drawing.Point(17, 515);
+            this.btnSupplier.Name = "btnSupplier";
+            this.btnSupplier.Size = new System.Drawing.Size(205, 69);
+            this.btnSupplier.TabIndex = 4;
+            this.btnSupplier.Text = "Supplier";
+            this.btnSupplier.UseVisualStyleBackColor = false;
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
             // 
-            // button2
+            // btnCategory
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(17, 384);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 69);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Catelog";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.btnCategory.FlatAppearance.BorderSize = 0;
+            this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategory.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategory.ForeColor = System.Drawing.Color.White;
+            this.btnCategory.Location = new System.Drawing.Point(17, 384);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Size = new System.Drawing.Size(205, 69);
+            this.btnCategory.TabIndex = 3;
+            this.btnCategory.Text = "Category";
+            this.btnCategory.UseVisualStyleBackColor = false;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
-            // button1
+            // btnFood
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(17, 248);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 69);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Food";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.btnFood.FlatAppearance.BorderSize = 0;
+            this.btnFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFood.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFood.ForeColor = System.Drawing.Color.White;
+            this.btnFood.Location = new System.Drawing.Point(17, 248);
+            this.btnFood.Name = "btnFood";
+            this.btnFood.Size = new System.Drawing.Size(205, 69);
+            this.btnFood.TabIndex = 2;
+            this.btnFood.Text = "Food";
+            this.btnFood.UseVisualStyleBackColor = false;
+            this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
             // 
             // label1
             // 
@@ -137,6 +138,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.uc_Supplier);
             this.panel2.Controls.Add(this.uC_Catelog1);
             this.panel2.Controls.Add(this.uC_FoodManager1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -145,12 +147,13 @@
             this.panel2.Size = new System.Drawing.Size(819, 596);
             this.panel2.TabIndex = 1;
             // 
-            // uC_FoodManager1
+            // uc_Supplier
             // 
-            this.uC_FoodManager1.Location = new System.Drawing.Point(0, 0);
-            this.uC_FoodManager1.Name = "uC_FoodManager1";
-            this.uC_FoodManager1.Size = new System.Drawing.Size(819, 596);
-            this.uC_FoodManager1.TabIndex = 0;
+            this.uc_Supplier.Location = new System.Drawing.Point(0, 0);
+            this.uc_Supplier.Name = "uc_Supplier";
+            this.uc_Supplier.Size = new System.Drawing.Size(819, 596);
+            this.uc_Supplier.TabIndex = 2;
+            this.uc_Supplier.Load += new System.EventHandler(this.uc_Supplier_Load);
             // 
             // uC_Catelog1
             // 
@@ -158,6 +161,13 @@
             this.uC_Catelog1.Name = "uC_Catelog1";
             this.uC_Catelog1.Size = new System.Drawing.Size(819, 596);
             this.uC_Catelog1.TabIndex = 1;
+            // 
+            // uC_FoodManager1
+            // 
+            this.uC_FoodManager1.Location = new System.Drawing.Point(0, 0);
+            this.uC_FoodManager1.Name = "uC_FoodManager1";
+            this.uC_FoodManager1.Size = new System.Drawing.Size(819, 596);
+            this.uC_FoodManager1.TabIndex = 0;
             // 
             // frmFoodManager
             // 
@@ -183,12 +193,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel sidepanel;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSupplier;
+        private System.Windows.Forms.Button btnCategory;
+        private System.Windows.Forms.Button btnFood;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private UserControls.UC_FoodManager uC_FoodManager1;
         private UserControls.UC_Catelog uC_Catelog1;
+        private UserControls.UC_Supplier uc_Supplier;
     }
 }

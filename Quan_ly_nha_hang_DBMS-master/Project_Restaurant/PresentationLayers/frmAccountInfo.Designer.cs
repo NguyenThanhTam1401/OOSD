@@ -37,7 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.uC_EditAccount1 = new Project_Restaurant.UserControls.UC_EditAccount();
-            this.uC_AccountInfo1 = new Project_Restaurant.UserControls.UC_AccountInfo();
+            this.uc_AccountInfo = new Project_Restaurant.PresentationLayers.UserControls.UC_AccountInfo();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -119,8 +119,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.uc_AccountInfo);
             this.panel3.Controls.Add(this.uC_EditAccount1);
-            this.panel3.Controls.Add(this.uC_AccountInfo1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(200, 0);
             this.panel3.Name = "panel3";
@@ -134,15 +134,13 @@
             this.uC_EditAccount1.Name = "uC_EditAccount1";
             this.uC_EditAccount1.Size = new System.Drawing.Size(796, 578);
             this.uC_EditAccount1.TabIndex = 1;
-            this.uC_EditAccount1.Load += new System.EventHandler(this.uC_EditAccount1_Load);
             // 
-            // uC_AccountInfo1
+            // uc_AccountInfo
             // 
-            this.uC_AccountInfo1.BackColor = System.Drawing.Color.White;
-            this.uC_AccountInfo1.Location = new System.Drawing.Point(0, 0);
-            this.uC_AccountInfo1.Name = "uC_AccountInfo1";
-            this.uC_AccountInfo1.Size = new System.Drawing.Size(796, 578);
-            this.uC_AccountInfo1.TabIndex = 0;
+            this.uc_AccountInfo.Location = new System.Drawing.Point(0, 0);
+            this.uc_AccountInfo.Name = "uc_AccountInfo";
+            this.uc_AccountInfo.Size = new System.Drawing.Size(796, 578);
+            this.uc_AccountInfo.TabIndex = 2;
             // 
             // frmAccountInfo
             // 
@@ -171,8 +169,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
-        private UserControls.UC_AccountInfo uC_AccountInfo1;
         private UserControls.UC_EditAccount uC_EditAccount1;
         private System.Windows.Forms.Button button3;
+        private PresentationLayers.UserControls.UC_AccountInfo uc_AccountInfo;
     }
 }

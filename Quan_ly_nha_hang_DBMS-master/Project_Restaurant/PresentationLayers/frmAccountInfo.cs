@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Project_Restaurant.PresentationLayers.UserControls;
+using Project_Restaurant.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +17,7 @@ namespace Project_Restaurant
         public frmAccountInfo()
         {
             InitializeComponent();
-            uC_AccountInfo1.BringToFront();
+            uc_AccountInfo.BringToFront();
             button1.ForeColor = Color.White;
             button1.BackColor = Color.FromArgb(81, 36, 103);
 
@@ -29,7 +31,8 @@ namespace Project_Restaurant
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            uC_AccountInfo1.BringToFront();
+            uc_AccountInfo.BringToFront();
+
             button1.ForeColor = Color.White;
             button1.BackColor = Color.FromArgb(81, 36, 103);
             panel2.Top = button1.Top;
@@ -62,9 +65,5 @@ namespace Project_Restaurant
             this.Close();
         }
 
-        private void uC_EditAccount1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
