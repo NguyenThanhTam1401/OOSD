@@ -35,24 +35,27 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.tbxSupplier = new System.Windows.Forms.TextBox();
             this.tbxFoodType = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tbxId = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbxSupplier = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvMain = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tbxSupplier = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -67,6 +70,7 @@
             this.btnCancel.TabIndex = 14;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -80,6 +84,7 @@
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
@@ -93,6 +98,7 @@
             this.btnEdit.TabIndex = 12;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -106,6 +112,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -133,21 +140,13 @@
             this.btnExit.TabIndex = 15;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
-            // 
-            // tbxSupplier
-            // 
-            this.tbxSupplier.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.tbxSupplier.Location = new System.Drawing.Point(154, 404);
-            this.tbxSupplier.Name = "tbxSupplier";
-            this.tbxSupplier.Size = new System.Drawing.Size(216, 28);
-            this.tbxSupplier.TabIndex = 2;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // tbxFoodType
             // 
             this.tbxFoodType.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxFoodType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.tbxFoodType.Location = new System.Drawing.Point(154, 344);
+            this.tbxFoodType.Location = new System.Drawing.Point(159, 350);
             this.tbxFoodType.Name = "tbxFoodType";
             this.tbxFoodType.Size = new System.Drawing.Size(216, 28);
             this.tbxFoodType.TabIndex = 1;
@@ -157,7 +156,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.label3.Location = new System.Drawing.Point(16, 409);
+            this.label3.Location = new System.Drawing.Point(21, 411);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 23);
             this.label3.TabIndex = 3;
@@ -168,16 +167,19 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.label2.Location = new System.Drawing.Point(16, 344);
+            this.label2.Location = new System.Drawing.Point(21, 350);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 23);
+            this.label2.Size = new System.Drawing.Size(109, 23);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Food Type:";
+            this.label2.Text = "Category:";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.tbxSupplier);
+            this.panel3.Controls.Add(this.tbxId);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.cbxSupplier);
             this.panel3.Controls.Add(this.tbxFoodType);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
@@ -187,10 +189,40 @@
             this.panel3.Size = new System.Drawing.Size(381, 493);
             this.panel3.TabIndex = 5;
             // 
+            // tbxId
+            // 
+            this.tbxId.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.tbxId.Location = new System.Drawing.Point(159, 285);
+            this.tbxId.Name = "tbxId";
+            this.tbxId.Size = new System.Drawing.Size(216, 28);
+            this.tbxId.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.label1.Location = new System.Drawing.Point(21, 285);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 23);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Category ID:";
+            // 
+            // cbxSupplier
+            // 
+            this.cbxSupplier.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Italic);
+            this.cbxSupplier.FormattingEnabled = true;
+            this.cbxSupplier.Location = new System.Drawing.Point(159, 411);
+            this.cbxSupplier.Name = "cbxSupplier";
+            this.cbxSupplier.Size = new System.Drawing.Size(216, 29);
+            this.cbxSupplier.TabIndex = 4;
+            this.cbxSupplier.SelectedIndexChanged += new System.EventHandler(this.cbxSupplier_SelectedIndexChanged);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(336, 262);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -207,6 +239,58 @@
             this.panel2.Size = new System.Drawing.Size(438, 493);
             this.panel2.TabIndex = 4;
             // 
+            // dgvMain
+            // 
+            this.dgvMain.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMain.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMain.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.Column6,
+            this.Column7});
+            this.dgvMain.Location = new System.Drawing.Point(0, 0);
+            this.dgvMain.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvMain.Name = "dgvMain";
+            this.dgvMain.RowHeadersWidth = 51;
+            this.dgvMain.Size = new System.Drawing.Size(438, 493);
+            this.dgvMain.TabIndex = 20;
+            this.dgvMain.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMain_CellClick);
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "IDTYPE";
+            this.dataGridViewTextBoxColumn3.FillWeight = 54.39887F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "CategoryID";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "TYPENAME";
+            this.dataGridViewTextBoxColumn4.FillWeight = 151.4102F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Category";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "IDSUP";
+            this.Column6.FillWeight = 42.78075F;
+            this.Column6.HeaderText = "SupplierID";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Visible = false;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "SUPNAME";
+            this.Column7.FillWeight = 151.4102F;
+            this.Column7.HeaderText = "Supplier";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
@@ -222,46 +306,14 @@
             this.panel1.Size = new System.Drawing.Size(819, 103);
             this.panel1.TabIndex = 3;
             // 
-            // Column4
+            // tbxSupplier
             // 
-            this.Column4.HeaderText = "Supplier";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "IDSupplier";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "TypeName";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "IDType";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // dgvMain
-            // 
-            this.dgvMain.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMain.BackgroundColor = System.Drawing.Color.White;
-            this.dgvMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMain.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dgvMain.Location = new System.Drawing.Point(0, 3);
-            this.dgvMain.Name = "dgvMain";
-            this.dgvMain.RowHeadersWidth = 51;
-            this.dgvMain.RowTemplate.Height = 24;
-            this.dgvMain.Size = new System.Drawing.Size(438, 487);
-            this.dgvMain.TabIndex = 0;
+            this.tbxSupplier.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.tbxSupplier.Location = new System.Drawing.Point(159, 412);
+            this.tbxSupplier.Name = "tbxSupplier";
+            this.tbxSupplier.Size = new System.Drawing.Size(216, 28);
+            this.tbxSupplier.TabIndex = 7;
             // 
             // UC_Catelog
             // 
@@ -276,8 +328,8 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -290,7 +342,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.TextBox tbxSupplier;
         private System.Windows.Forms.TextBox tbxFoodType;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -298,10 +349,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cbxSupplier;
         private System.Windows.Forms.DataGridView dgvMain;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.TextBox tbxId;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbxSupplier;
     }
 }
