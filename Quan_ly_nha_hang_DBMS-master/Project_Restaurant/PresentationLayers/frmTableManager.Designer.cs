@@ -28,33 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTableManager));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnCategory = new System.Windows.Forms.Button();
+            this.btnVoucher = new System.Windows.Forms.Button();
+            this.btnAdditionFood = new System.Windows.Forms.Button();
+            this.btnSwichTable = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.lvBill = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnCheckVoucher = new System.Windows.Forms.Button();
+            this.btnPay = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbxTotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbVoucherValue = new System.Windows.Forms.Label();
+            this.tbxVoucher = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.lbTableNumber = new System.Windows.Forms.Label();
+            this.cbxCategory = new System.Windows.Forms.ComboBox();
+            this.btnAddition = new System.Windows.Forms.Button();
+            this.nmrAmount = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnMerge = new System.Windows.Forms.Button();
+            this.cbxTable = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lbxPrice = new System.Windows.Forms.ListBox();
             this.lbxFoodName = new System.Windows.Forms.ListBox();
@@ -64,28 +71,32 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.cbxCategory = new System.Windows.Forms.ComboBox();
+            this.tpArea1 = new System.Windows.Forms.TabPage();
+            this.lvLayer1 = new System.Windows.Forms.ListView();
+            this.tbArea2 = new System.Windows.Forms.TabPage();
+            this.lvLayer2 = new System.Windows.Forms.ListView();
+            this.ilTableState = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).BeginInit();
             this.panel6.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tpArea1.SuspendLayout();
+            this.tbArea2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnCategory);
+            this.panel1.Controls.Add(this.btnVoucher);
+            this.panel1.Controls.Add(this.btnAdditionFood);
+            this.panel1.Controls.Add(this.btnSwichTable);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -94,80 +105,80 @@
             this.panel1.Size = new System.Drawing.Size(213, 739);
             this.panel1.TabIndex = 0;
             // 
-            // button6
+            // btnExit
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(24, 645);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(172, 72);
-            this.button6.TabIndex = 18;
-            this.button6.Text = "Thoát";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(24, 645);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(172, 72);
+            this.btnExit.TabIndex = 18;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // button5
+            // btnCategory
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(24, 550);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(172, 72);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "Danh Mục";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.btnCategory.FlatAppearance.BorderSize = 0;
+            this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategory.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategory.ForeColor = System.Drawing.Color.White;
+            this.btnCategory.Location = new System.Drawing.Point(24, 550);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Size = new System.Drawing.Size(172, 72);
+            this.btnCategory.TabIndex = 17;
+            this.btnCategory.Text = "Danh Mục";
+            this.btnCategory.UseVisualStyleBackColor = false;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
-            // button4
+            // btnVoucher
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(24, 461);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(172, 72);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Voucher";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnVoucher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.btnVoucher.FlatAppearance.BorderSize = 0;
+            this.btnVoucher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoucher.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoucher.ForeColor = System.Drawing.Color.White;
+            this.btnVoucher.Location = new System.Drawing.Point(24, 461);
+            this.btnVoucher.Name = "btnVoucher";
+            this.btnVoucher.Size = new System.Drawing.Size(172, 72);
+            this.btnVoucher.TabIndex = 16;
+            this.btnVoucher.Text = "Voucher";
+            this.btnVoucher.UseVisualStyleBackColor = false;
+            this.btnVoucher.Click += new System.EventHandler(this.btnVoucher_Click);
             // 
-            // button3
+            // btnAdditionFood
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(24, 369);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(172, 72);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Thêm Món";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnAdditionFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.btnAdditionFood.FlatAppearance.BorderSize = 0;
+            this.btnAdditionFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdditionFood.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdditionFood.ForeColor = System.Drawing.Color.White;
+            this.btnAdditionFood.Location = new System.Drawing.Point(24, 369);
+            this.btnAdditionFood.Name = "btnAdditionFood";
+            this.btnAdditionFood.Size = new System.Drawing.Size(172, 72);
+            this.btnAdditionFood.TabIndex = 15;
+            this.btnAdditionFood.Text = "Thêm Món";
+            this.btnAdditionFood.UseVisualStyleBackColor = false;
+            this.btnAdditionFood.Click += new System.EventHandler(this.btnAdditionFood_Click);
             // 
-            // button2
+            // btnSwichTable
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(24, 276);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 72);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Chuyển Bàn";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSwichTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.btnSwichTable.FlatAppearance.BorderSize = 0;
+            this.btnSwichTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSwichTable.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSwichTable.ForeColor = System.Drawing.Color.White;
+            this.btnSwichTable.Location = new System.Drawing.Point(24, 276);
+            this.btnSwichTable.Name = "btnSwichTable";
+            this.btnSwichTable.Size = new System.Drawing.Size(172, 72);
+            this.btnSwichTable.TabIndex = 14;
+            this.btnSwichTable.Text = "Chuyển Bàn";
+            this.btnSwichTable.UseVisualStyleBackColor = false;
+            this.btnSwichTable.Click += new System.EventHandler(this.btnSwichTable_Click);
             // 
             // panel5
             // 
@@ -177,20 +188,20 @@
             this.panel5.Size = new System.Drawing.Size(10, 72);
             this.panel5.TabIndex = 13;
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(24, 178);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 72);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Tìm Kiếm";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(24, 178);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(172, 72);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "Tìm Kiếm";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // pictureBox1
             // 
@@ -213,127 +224,155 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.lvBill);
+            this.panel2.Controls.Add(this.btnCheckVoucher);
+            this.panel2.Controls.Add(this.btnPay);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.tbxTotal);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.lbVoucherValue);
+            this.panel2.Controls.Add(this.tbxVoucher);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.listView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(213, 523);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1015, 216);
             this.panel2.TabIndex = 1;
             // 
-            // button7
+            // lvBill
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(416, 103);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(202, 57);
-            this.button7.TabIndex = 25;
-            this.button7.Text = "Check";
-            this.button7.UseVisualStyleBackColor = false;
+            this.lvBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.lvBill.ForeColor = System.Drawing.Color.Maroon;
+            this.lvBill.HideSelection = false;
+            this.lvBill.Location = new System.Drawing.Point(0, 3);
+            this.lvBill.Name = "lvBill";
+            this.lvBill.Size = new System.Drawing.Size(447, 208);
+            this.lvBill.TabIndex = 26;
+            this.lvBill.UseCompatibleStateImageBehavior = false;
+            this.lvBill.View = System.Windows.Forms.View.Details;
             // 
-            // button8
+            // columnHeader5
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(670, 147);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(337, 57);
-            this.button8.TabIndex = 24;
-            this.button8.Text = "Thanh Toán";
-            this.button8.UseVisualStyleBackColor = false;
+            this.columnHeader5.Text = "Món";
+            this.columnHeader5.Width = 110;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Giá";
+            this.columnHeader6.Width = 65;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Số lượng";
+            this.columnHeader7.Width = 65;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Tổng";
+            this.columnHeader8.Width = 90;
+            // 
+            // btnCheckVoucher
+            // 
+            this.btnCheckVoucher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.btnCheckVoucher.FlatAppearance.BorderSize = 0;
+            this.btnCheckVoucher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckVoucher.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckVoucher.ForeColor = System.Drawing.Color.White;
+            this.btnCheckVoucher.Location = new System.Drawing.Point(450, 103);
+            this.btnCheckVoucher.Name = "btnCheckVoucher";
+            this.btnCheckVoucher.Size = new System.Drawing.Size(202, 57);
+            this.btnCheckVoucher.TabIndex = 25;
+            this.btnCheckVoucher.Text = "Check";
+            this.btnCheckVoucher.UseVisualStyleBackColor = false;
+            // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.btnPay.FlatAppearance.BorderSize = 0;
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPay.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Location = new System.Drawing.Point(671, 103);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(337, 57);
+            this.btnPay.TabIndex = 24;
+            this.btnPay.Text = "Thanh Toán";
+            this.btnPay.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.label4.Location = new System.Drawing.Point(933, 103);
+            this.label4.Location = new System.Drawing.Point(934, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 30);
             this.label4.TabIndex = 23;
             this.label4.Text = "VND";
             // 
-            // textBox2
+            // tbxTotal
             // 
-            this.textBox2.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.textBox2.Location = new System.Drawing.Point(670, 100);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(246, 36);
-            this.textBox2.TabIndex = 22;
+            this.tbxTotal.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.tbxTotal.Location = new System.Drawing.Point(671, 56);
+            this.tbxTotal.Name = "tbxTotal";
+            this.tbxTotal.Size = new System.Drawing.Size(246, 36);
+            this.tbxTotal.TabIndex = 22;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.label3.Location = new System.Drawing.Point(754, 51);
+            this.label3.Location = new System.Drawing.Point(755, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 30);
             this.label3.TabIndex = 21;
             this.label3.Text = "Tổng Tiền";
             // 
-            // label2
+            // lbVoucherValue
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.label2.Location = new System.Drawing.Point(500, 177);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 30);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "0%";
+            this.lbVoucherValue.AutoSize = true;
+            this.lbVoucherValue.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbVoucherValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.lbVoucherValue.Location = new System.Drawing.Point(534, 177);
+            this.lbVoucherValue.Name = "lbVoucherValue";
+            this.lbVoucherValue.Size = new System.Drawing.Size(41, 30);
+            this.lbVoucherValue.TabIndex = 20;
+            this.lbVoucherValue.Text = "0%";
             // 
-            // textBox1
+            // tbxVoucher
             // 
-            this.textBox1.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.textBox1.Location = new System.Drawing.Point(419, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 36);
-            this.textBox1.TabIndex = 2;
+            this.tbxVoucher.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.tbxVoucher.Location = new System.Drawing.Point(453, 51);
+            this.tbxVoucher.Name = "tbxVoucher";
+            this.tbxVoucher.Size = new System.Drawing.Size(202, 36);
+            this.tbxVoucher.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.label1.Location = new System.Drawing.Point(465, 11);
+            this.label1.Location = new System.Drawing.Point(499, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Voucher";
             // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(10, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(385, 206);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.lbTableNumber);
             this.panel3.Controls.Add(this.cbxCategory);
-            this.panel3.Controls.Add(this.button11);
-            this.panel3.Controls.Add(this.numericUpDown1);
+            this.panel3.Controls.Add(this.btnAddition);
+            this.panel3.Controls.Add(this.nmrAmount);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.button10);
-            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.btnMerge);
+            this.panel3.Controls.Add(this.cbxTable);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.lbxPrice);
             this.panel3.Controls.Add(this.lbxFoodName);
@@ -347,28 +386,53 @@
             this.panel3.Size = new System.Drawing.Size(394, 523);
             this.panel3.TabIndex = 2;
             // 
-            // button11
+            // lbTableNumber
             // 
-            this.button11.BackColor = System.Drawing.Color.White;
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button11.FlatAppearance.BorderSize = 3;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Location = new System.Drawing.Point(117, 413);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(100, 97);
-            this.button11.TabIndex = 35;
-            this.button11.UseVisualStyleBackColor = false;
+            this.lbTableNumber.AutoSize = true;
+            this.lbTableNumber.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbTableNumber.ForeColor = System.Drawing.Color.Red;
+            this.lbTableNumber.Location = new System.Drawing.Point(226, 17);
+            this.lbTableNumber.Name = "lbTableNumber";
+            this.lbTableNumber.Size = new System.Drawing.Size(27, 30);
+            this.lbTableNumber.TabIndex = 37;
+            this.lbTableNumber.Text = "0";
             // 
-            // numericUpDown1
+            // cbxCategory
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.numericUpDown1.Location = new System.Drawing.Point(243, 463);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 36);
-            this.numericUpDown1.TabIndex = 34;
+            this.cbxCategory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbxCategory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCategory.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.cbxCategory.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cbxCategory.FormattingEnabled = true;
+            this.cbxCategory.Location = new System.Drawing.Point(159, 105);
+            this.cbxCategory.Name = "cbxCategory";
+            this.cbxCategory.Size = new System.Drawing.Size(227, 37);
+            this.cbxCategory.TabIndex = 36;
+            this.cbxCategory.SelectedIndexChanged += new System.EventHandler(this.cbxCategory_SelectedIndexChanged);
+            // 
+            // btnAddition
+            // 
+            this.btnAddition.BackColor = System.Drawing.Color.White;
+            this.btnAddition.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddition.BackgroundImage")));
+            this.btnAddition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddition.FlatAppearance.BorderSize = 3;
+            this.btnAddition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddition.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddition.ForeColor = System.Drawing.Color.Black;
+            this.btnAddition.Location = new System.Drawing.Point(117, 413);
+            this.btnAddition.Name = "btnAddition";
+            this.btnAddition.Size = new System.Drawing.Size(100, 97);
+            this.btnAddition.TabIndex = 35;
+            this.btnAddition.UseVisualStyleBackColor = false;
+            // 
+            // nmrAmount
+            // 
+            this.nmrAmount.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.nmrAmount.Location = new System.Drawing.Point(243, 463);
+            this.nmrAmount.Name = "nmrAmount";
+            this.nmrAmount.Size = new System.Drawing.Size(120, 36);
+            this.nmrAmount.TabIndex = 34;
             // 
             // label9
             // 
@@ -381,29 +445,30 @@
             this.label9.TabIndex = 26;
             this.label9.Text = "Số Lượng:";
             // 
-            // button10
+            // btnMerge
             // 
-            this.button10.BackColor = System.Drawing.Color.White;
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button10.FlatAppearance.BorderSize = 3;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Location = new System.Drawing.Point(11, 413);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(100, 97);
-            this.button10.TabIndex = 26;
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnMerge.BackColor = System.Drawing.Color.White;
+            this.btnMerge.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMerge.BackgroundImage")));
+            this.btnMerge.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMerge.FlatAppearance.BorderSize = 3;
+            this.btnMerge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMerge.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMerge.ForeColor = System.Drawing.Color.Black;
+            this.btnMerge.Location = new System.Drawing.Point(11, 413);
+            this.btnMerge.Name = "btnMerge";
+            this.btnMerge.Size = new System.Drawing.Size(100, 97);
+            this.btnMerge.TabIndex = 26;
+            this.btnMerge.UseVisualStyleBackColor = false;
+            this.btnMerge.Click += new System.EventHandler(this.btnMerge_Click);
             // 
-            // comboBox1
+            // cbxTable
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(207, 369);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 30);
-            this.comboBox1.TabIndex = 32;
+            this.cbxTable.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.cbxTable.FormattingEnabled = true;
+            this.cbxTable.Location = new System.Drawing.Point(207, 369);
+            this.cbxTable.Name = "cbxTable";
+            this.cbxTable.Size = new System.Drawing.Size(180, 30);
+            this.cbxTable.TabIndex = 32;
             // 
             // label8
             // 
@@ -421,9 +486,9 @@
             this.lbxPrice.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxPrice.FormattingEnabled = true;
             this.lbxPrice.ItemHeight = 22;
-            this.lbxPrice.Location = new System.Drawing.Point(206, 159);
+            this.lbxPrice.Location = new System.Drawing.Point(258, 159);
             this.lbxPrice.Name = "lbxPrice";
-            this.lbxPrice.Size = new System.Drawing.Size(180, 202);
+            this.lbxPrice.Size = new System.Drawing.Size(128, 202);
             this.lbxPrice.TabIndex = 31;
             // 
             // lbxFoodName
@@ -433,16 +498,18 @@
             this.lbxFoodName.ItemHeight = 22;
             this.lbxFoodName.Location = new System.Drawing.Point(11, 159);
             this.lbxFoodName.Name = "lbxFoodName";
-            this.lbxFoodName.Size = new System.Drawing.Size(189, 202);
+            this.lbxFoodName.Size = new System.Drawing.Size(241, 202);
             this.lbxFoodName.TabIndex = 30;
             // 
             // tbxSearch
             // 
             this.tbxSearch.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.tbxSearch.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tbxSearch.Location = new System.Drawing.Point(159, 62);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(227, 36);
             this.tbxSearch.TabIndex = 26;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
             // 
             // label7
             // 
@@ -471,7 +538,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.label5.Location = new System.Drawing.Point(133, 17);
+            this.label5.Location = new System.Drawing.Point(97, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 30);
             this.label5.TabIndex = 26;
@@ -489,8 +556,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tpArea1);
+            this.tabControl1.Controls.Add(this.tbArea2);
             this.tabControl1.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.tabControl1.Location = new System.Drawing.Point(6, 12);
             this.tabControl1.Name = "tabControl1";
@@ -498,36 +565,62 @@
             this.tabControl1.Size = new System.Drawing.Size(609, 505);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // tpArea1
             // 
-            this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.tabPage1.Location = new System.Drawing.Point(4, 38);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(601, 463);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Tầng Trệt";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tpArea1.Controls.Add(this.lvLayer1);
+            this.tpArea1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.tpArea1.Location = new System.Drawing.Point(4, 38);
+            this.tpArea1.Name = "tpArea1";
+            this.tpArea1.Padding = new System.Windows.Forms.Padding(3);
+            this.tpArea1.Size = new System.Drawing.Size(601, 463);
+            this.tpArea1.TabIndex = 0;
+            this.tpArea1.Text = "Tầng Trệt";
+            this.tpArea1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // lvLayer1
             // 
-            this.tabPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
-            this.tabPage2.Location = new System.Drawing.Point(4, 38);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(601, 463);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Tầng 2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.lvLayer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvLayer1.ForeColor = System.Drawing.Color.Black;
+            this.lvLayer1.HideSelection = false;
+            this.lvLayer1.Location = new System.Drawing.Point(4, 0);
+            this.lvLayer1.Margin = new System.Windows.Forms.Padding(4);
+            this.lvLayer1.Name = "lvLayer1";
+            this.lvLayer1.Size = new System.Drawing.Size(597, 461);
+            this.lvLayer1.TabIndex = 2;
+            this.lvLayer1.UseCompatibleStateImageBehavior = false;
+            this.lvLayer1.SelectedIndexChanged += new System.EventHandler(this.lvLayer1_SelectedIndexChanged);
             // 
-            // cbxCategory
+            // tbArea2
             // 
-            this.cbxCategory.Font = new System.Drawing.Font("Modern No. 20", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.cbxCategory.FormattingEnabled = true;
-            this.cbxCategory.Location = new System.Drawing.Point(159, 105);
-            this.cbxCategory.Name = "cbxCategory";
-            this.cbxCategory.Size = new System.Drawing.Size(227, 37);
-            this.cbxCategory.TabIndex = 36;
+            this.tbArea2.Controls.Add(this.lvLayer2);
+            this.tbArea2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(36)))), ((int)(((byte)(103)))));
+            this.tbArea2.Location = new System.Drawing.Point(4, 38);
+            this.tbArea2.Name = "tbArea2";
+            this.tbArea2.Padding = new System.Windows.Forms.Padding(3);
+            this.tbArea2.Size = new System.Drawing.Size(601, 463);
+            this.tbArea2.TabIndex = 1;
+            this.tbArea2.Text = "Tầng 2";
+            this.tbArea2.UseVisualStyleBackColor = true;
+            // 
+            // lvLayer2
+            // 
+            this.lvLayer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvLayer2.ForeColor = System.Drawing.Color.Black;
+            this.lvLayer2.HideSelection = false;
+            this.lvLayer2.Location = new System.Drawing.Point(4, 0);
+            this.lvLayer2.Margin = new System.Windows.Forms.Padding(4);
+            this.lvLayer2.Name = "lvLayer2";
+            this.lvLayer2.Size = new System.Drawing.Size(597, 461);
+            this.lvLayer2.TabIndex = 1;
+            this.lvLayer2.UseCompatibleStateImageBehavior = false;
+            this.lvLayer2.SelectedIndexChanged += new System.EventHandler(this.lvLayer2_SelectedIndexChanged);
+            // 
+            // ilTableState
+            // 
+            this.ilTableState.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilTableState.ImageStream")));
+            this.ilTableState.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilTableState.Images.SetKeyName(0, "CoNguoi.png");
+            this.ilTableState.Images.SetKeyName(1, "Trong.png");
             // 
             // frmTableManager
             // 
@@ -547,9 +640,11 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).EndInit();
             this.panel6.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tpArea1.ResumeLayout(false);
+            this.tbArea2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -559,40 +654,48 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnCategory;
+        private System.Windows.Forms.Button btnVoucher;
+        private System.Windows.Forms.Button btnAdditionFood;
+        private System.Windows.Forms.Button btnSwichTable;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnCheckVoucher;
+        private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbxTotal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbVoucherValue;
+        private System.Windows.Forms.TextBox tbxVoucher;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TabPage tpArea1;
+        private System.Windows.Forms.TabPage tbArea2;
+        private System.Windows.Forms.Button btnAddition;
+        private System.Windows.Forms.NumericUpDown nmrAmount;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnMerge;
+        private System.Windows.Forms.ComboBox cbxTable;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListBox lbxPrice;
         private System.Windows.Forms.ListBox lbxFoodName;
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.ComboBox cbxCategory;
+        private System.Windows.Forms.ListView lvBill;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.Label lbTableNumber;
+        private System.Windows.Forms.ListView lvLayer1;
+        private System.Windows.Forms.ListView lvLayer2;
+        private System.Windows.Forms.ImageList ilTableState;
     }
 }

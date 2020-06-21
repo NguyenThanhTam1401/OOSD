@@ -339,7 +339,7 @@ namespace QuanLyQuanAn
         {
             tbxvoucher.Focus();
         }
-
+ 
         private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cbxdanhmuc.Focus();

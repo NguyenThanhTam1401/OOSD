@@ -23,8 +23,22 @@ namespace Game_Dua_Xe
         public frmMain()
         {
             InitializeComponent();
-            Init();
 
+            Init();
+            InitContext();
+        }
+
+        private void InitContext()
+        {
+            //My car
+            MyCar = new CarContext(StartState.Instance());
+
+            MyCar.Image = Game_Dua_Xe.Properties.Resources.police;
+            MyCar.Location = new Point(130, 310);
+            MyCar.Size = new Size(40, 80);
+            MyCar.Speed = 2;
+            this.Controls.Add(MyCar);
+            MyCar.BringToFront();
         }
 
         // Timer chạy 3s đầu game
@@ -82,13 +96,6 @@ namespace Game_Dua_Xe
             this.tmBatDau.Enabled = false;
             this.tmBatDau.Interval = 100;
 
-            //My car
-            MyCar.Image = Game_Dua_Xe.Properties.Resources.police;
-            MyCar.Location = new Point(130, 310);
-            MyCar.Size = new Size(40, 80);
-            MyCar.Speed = 2;
-            this.Controls.Add(MyCar);
-            MyCar.BringToFront();
 
             //list Enemy
             PhuongTien xehoi = new PhuongTien();
@@ -238,9 +245,6 @@ namespace Game_Dua_Xe
         //Event nhấn button start game
         private void btnStart_Click(object sender, EventArgs e)
         {
-            //Bắt đầu với Start State
-            MyCar.TransitionTo(StartState.Instance());
-
             tmBatDau.Start();
             btnStart.Enabled = false;
             btnRestart.Enabled = false;
