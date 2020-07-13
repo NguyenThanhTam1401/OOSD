@@ -15,6 +15,7 @@ namespace QuanLyQuanAn.BusinessLayers
         public BLNhanVien()
         {
             db = new DBMain();
+
         }
         public DataTable GetListEmployee(string namecol, bool isAscending)
         {

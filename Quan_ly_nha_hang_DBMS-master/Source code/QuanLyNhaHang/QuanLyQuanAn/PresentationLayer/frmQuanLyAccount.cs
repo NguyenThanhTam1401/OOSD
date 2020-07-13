@@ -32,7 +32,7 @@ namespace QuanLyQuanAn.PresentationLayer
 
         private void LoadData()
         {
-            lstAccount = account.GetListAccount();
+            lstAccount = account.GetListAccount();  
             dgvaccount.DataSource = lstAccount;
             lstNhanVien = nhanvien.GetlistNV();
             cmbHoten.DisplayMember = "Name";
@@ -46,6 +46,7 @@ namespace QuanLyQuanAn.PresentationLayer
             dgvaccount.Columns[10].Visible = false;
             dgvaccount.Columns[11].Visible = false;
             dgvaccount.Columns[12].Visible = false;
+
             pnl.Enabled = false;
             btnthem.Enabled = true;
             btnxoa.Enabled = true;
