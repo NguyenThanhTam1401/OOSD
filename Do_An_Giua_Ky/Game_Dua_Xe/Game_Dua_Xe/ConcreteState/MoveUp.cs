@@ -52,6 +52,10 @@ namespace Game_Dua_Xe
         //Chuyển qua các sate khác
         public override void StateTransit()
         {
+
+            //if (this._CarContext._Down)
+            //    this._CarContext.TransitionTo(new MoveDown());
+
             if (this._CarContext._Down)
                 this._CarContext.TransitionTo(MoveDown.Instance());
 
